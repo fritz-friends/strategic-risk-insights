@@ -1,7 +1,6 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+import React from 'react';
+import { Link } from 'gatsby';
+import logo from '../img/logo.svg';
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -9,8 +8,8 @@ const Navbar = class extends React.Component {
     this.state = {
       active: false,
       navBarActiveClass: '',
-    }
-  }
+    };
+  };
 
   toggleHamburger = () => {
     // toggle the active boolean in the state
@@ -29,8 +28,8 @@ const Navbar = class extends React.Component {
             navBarActiveClass: '',
           })
       }
-    )
-  }
+    );
+  };
 
   render() {
     return (
@@ -60,20 +59,20 @@ const Navbar = class extends React.Component {
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
             <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
-              </Link>
-              <Link className="navbar-item" to="/products">
-                Products
+              <Link className="navbar-item" to="/services">
+                Services
               </Link>
               <Link className="navbar-item" to="/blog">
                 Blog
               </Link>
-              <Link className="navbar-item" to="/contact">
-                Contact
+              <Link className="navbar-item" to="/podcast">
+                Podcast
               </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
+              <Link className="navbar-item" to="/book">
+                Book
+              </Link>
+              <Link className="navbar-item" to="/about">
+                About
               </Link>
             </div>
 
@@ -84,4 +83,4 @@ const Navbar = class extends React.Component {
   }
 }
 
-export default Navbar
+export default Navbar;
