@@ -5,50 +5,52 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const IndexPageTemplate = ({
   image,
   title,
-  heading,
-  subheading,
-  mainpitch,
-  description,
   intro,
+  trackrecord,
 }) => (
     <div>
-      <div
-        className="full-width-image margin-top-0"
-        style={{
-          backgroundImage: `url(${
-            !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-            })`,
-          backgroundPosition: `top left`,
-          backgroundAttachment: `fixed`,
-        }}
-      >
-        <div>
-          <h1>
-            {title}
-          </h1>
-          <h3>
-            {subheading}
-          </h3>
-        </div>
-      </div>
+      {/* Introduction */}
       <section>
-        <h1>{mainpitch.title}</h1>
-        <h3>{mainpitch.description}</h3>
-        <h3>{heading}</h3>
-        <p>{description}</p>
+        <div
+          className="full-width-image margin-top-0"
+          style={{
+            backgroundImage: `url(${
+              !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+              })`,
+            backgroundPosition: `top left`,
+            backgroundAttachment: `fixed`,
+          }}
+        >
+          <div>
+            <h1>
+              {title}
+            </h1>
+          </div>
+        </div>
         <Features gridItems={intro.blurbs} />
-        <Link to="/products">
-          See all products
-        </Link>
+      </section>
+
+      {/* Latest Content */}
+      <section>
         <h3>Latest stories</h3>
         <BlogRoll />
         <Link to="/blog">
           Read more
         </Link>
+      </section>
+
+      {/* Track Record */}
+      <section>
+        <div>
+          <PreviewCompatibleImage imageInfo={trackrecord[0]} />
+          <h2>{trackrecord[0].heading}</h2>
+          <p>{trackrecord[0].description}</p>
+        </div>
       </section>
     </div>
   )
@@ -56,28 +58,22 @@ export const IndexPageTemplate = ({
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
-  description: PropTypes.string,
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
+  trackrecord: PropTypes.array,
 }
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-
+  console.log('frontmatter.trackrecord :>> ', frontmatter.trackrecord);
   return (
     <Layout>
       <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
         intro={frontmatter.intro}
+        trackrecord={frontmatter.trackrecord}
       />
     </Layout>
   )
@@ -95,7 +91,7 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+    markdownRemark(frontmatter: {templateKey: {eq: "index-page"}, trackrecord: {elemMatch: {description: {}}}}) {
       frontmatter {
         title
         image {
@@ -104,14 +100,9 @@ export const pageQuery = graphql`
               ...GatsbyImageSharpFluid
             }
           }
+          id
         }
         heading
-        subheading
-        mainpitch {
-          title
-          description
-        }
-        description
         intro {
           blurbs {
             image {
@@ -120,8 +111,20 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              id
             }
+            title
             text
+          }
+        }
+        trackrecord {
+          image {
+            childImageSharp {
+              fluid(maxWidth: 240, quality: 64){
+                ...GatsbyImageSharpFluid
+              }
+            }
+            id
           }
           heading
           description
