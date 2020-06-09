@@ -2,18 +2,55 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
-export const BookTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content
+export const BookTemplate = ({ markup }) => {
+  console.log('markup :>> ', markup);
+  const { title,
+    firstReview,
+    firstReviewer,
+    secondReview,
+    secondReviewer,
+    description } = markup.frontmatter;
 
   return (
-    <section>
-      <h2>
-        {title}
-      </h2>
-      <PageContent className="content" content={content} />
-    </section>
+    <div>
+      {/* Reviews */}
+      <section>
+        <h2>
+          {title}
+        </h2>
+        <div>
+          <div>
+            <PreviewCompatibleImage imageInfo={markup.frontmatter} />
+          </div>
+          <div>
+            {firstReview}
+          </div>
+          <div>
+            {firstReviewer}
+          </div>
+        </div>
+        <div>
+          <div>
+            {secondReview}
+          </div>
+          <div>
+            {secondReviewer}
+          </div>
+        </div>
+      </section>
+
+      {/* Buy Now */}
+      <section>
+
+      </section>
+
+      {/* Description */}
+      <section>
+        {description}
+      </section>
+    </div>
   )
 }
 
@@ -24,14 +61,12 @@ BookTemplate.propTypes = {
 }
 
 const BookPage = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { markdownRemark: frontmatter } = data
 
   return (
     <Layout>
       <BookTemplate
-        contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
+        markup={frontmatter}
       />
     </Layout>
   )
@@ -46,9 +81,21 @@ export default BookPage
 export const BookPageQuery = graphql`
   query BookPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      html
       frontmatter {
         title
+        firstReview
+        firstReviewer
+        secondReview
+        secondReviewer
+        image {
+          childImageSharp {
+            fluid(maxWidth: 240, quality: 64){
+              ...GatsbyImageSharpFluid
+            }
+          }
+          id
+        }
+        description
       }
     }
   }

@@ -1,6 +1,6 @@
 ---
 templateKey: 'service-page'
-path: /products
+path: /services
 title: Our Services
 image: /img/media-placeholder.png
 intro:
