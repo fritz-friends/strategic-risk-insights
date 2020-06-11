@@ -10,7 +10,26 @@
 .btn-large
 	padding: 14px 32px;
 	border-radius: 24px;
+	color: $sri-white
+	background: $sri-black
+	box-shadow: 2px 2px 0px $sri-white, 3px 4px 0px $sri-black
+	&:hover
+		background: $sri-violet
+		box-shadow: 2px 2px 0px $sri-white, 3px 4px 0px $sri-violet
+		transition
+	&:active
+		background: $sri-plum
+		box-shadow: 0px 0px 0px $sri-white, 0px 0px 0px $sri-plum
+		transform: translate(3px,4px)
 	&.btn-reversed
 		color: $sri-black
 		background: $sri-white
 		box-shadow: 2px 2px 0px $sri-black, 3px 4px 0px $sri-white
+		&:hover
+			background: $sri-violet
+			box-shadow: 2px 2px 0px $sri-black, 3px 4px 0px $sri-violet
+			transition
+		&:active
+			background: $sri-plum
+			box-shadow: 0px 0px 0px $sri-black, 0px 0px 0px $sri-plum
+			transform: translate(3px,4px)
