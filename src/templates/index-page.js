@@ -1,63 +1,55 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import React from "react";
+import PropTypes from "prop-types";
+import { Link, graphql } from "gatsby";
 
-import Layout from '../components/Layout'
-import Features from '../components/Features'
-import BlogRoll from '../components/BlogRoll'
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import Layout from "../components/Layout";
+import Features from "../components/Features";
+import BlogRoll from "../components/BlogRoll";
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
-export const IndexPageTemplate = ({
-  image,
-  title,
-  intro,
-  trackrecord,
-}) => (
-    <div>
-      {/* Introduction */}
-      <section className="intro">
-        <h1>
-          {title}
-        </h1>
-        <img src="../img/media-placeholder.png" />
-      </section>
+export const IndexPageTemplate = ({ image, title, intro, trackrecord }) => (
+  <div>
+    {/* Introduction */}
+    <section className="intro">
+      <h1>{title}</h1>
+      <img src="../img/media-placeholder.png" />
+    </section>
 
-      {/* services */}
-      <section className="service-blurbs">
-        <Features gridItems={intro.blurbs} />
-      </section>
-      {/* Latest Content */}
-      <section>
-        <h3>Latest stories</h3>
-        <BlogRoll />
-        <Link to="/blog">
-          Read more
-        </Link>
-      </section>
+    {/* services */}
+    <section className="service-blurbs">
+      <Features gridItems={intro.blurbs} />
+      <Link to="/services" className="btn btn-reversed btn-large">See Our Services</Link>
+    </section>
+    {/* Latest Content */}
+    <section>
+      <h3>Latest stories</h3>
+      <BlogRoll />
+      <Link to="/blog">Read more</Link>
+    </section>
 
-      {/* Track Record */}
-      <section>
-        <div>
-          <PreviewCompatibleImage imageInfo={trackrecord[0]} />
-          <h2>{trackrecord[0].heading}</h2>
-          <p>{trackrecord[0].description}</p>
-        </div>
-      </section>
-    </div>
-  )
+    {/* Track Record */}
+    <section>
+      <div>
+        <PreviewCompatibleImage imageInfo={trackrecord[0]} />
+        <h2>{trackrecord[0].heading}</h2>
+        <p>{trackrecord[0].description}</p>
+      </div>
+    </section>
+  </div>
+);
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   intro: PropTypes.shape({
-    blurbs: PropTypes.array,
+    blurbs: PropTypes.array
   }),
-  trackrecord: PropTypes.array,
-}
+  trackrecord: PropTypes.array
+};
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
-  console.log('frontmatter.image :>> ', frontmatter.image);
+  const { frontmatter } = data.markdownRemark;
+  console.log("frontmatter.image :>> ", frontmatter.image);
   return (
     <Layout>
       <IndexPageTemplate
@@ -67,22 +59,27 @@ const IndexPage = ({ data }) => {
         trackrecord={frontmatter.trackrecord}
       />
     </Layout>
-  )
-}
+  );
+};
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
-    }),
-  }),
-}
+      frontmatter: PropTypes.object
+    })
+  })
+};
 
 export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
-    markdownRemark(frontmatter: {templateKey: {eq: "index-page"}, trackrecord: {elemMatch: {description: {}}}}) {
+    markdownRemark(
+      frontmatter: {
+        templateKey: { eq: "index-page" }
+        trackrecord: { elemMatch: { description: {} } }
+      }
+    ) {
       frontmatter {
         title
         image {
@@ -111,7 +108,7 @@ export const pageQuery = graphql`
         trackrecord {
           image {
             childImageSharp {
-              fluid(maxWidth: 240, quality: 64){
+              fluid(maxWidth: 240, quality: 64) {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -123,4 +120,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
