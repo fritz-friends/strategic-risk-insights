@@ -15,26 +15,17 @@ export const IndexPageTemplate = ({
 }) => (
     <div>
       {/* Introduction */}
-      <section>
-        <div
-          className="full-width-image margin-top-0"
-          style={{
-            backgroundImage: `url(${
-              !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-              })`,
-            backgroundPosition: `top left`,
-            backgroundAttachment: `fixed`,
-          }}
-        >
-          <div>
-            <h1>
-              {title}
-            </h1>
-          </div>
-        </div>
-        <Features gridItems={intro.blurbs} />
+      <section className="intro">
+        <h1>
+          {title}
+        </h1>
+        <img src="../img/media-placeholder.png" />
       </section>
 
+      {/* services */}
+      <section>
+        <Features gridItems={intro.blurbs} />
+      </section>
       {/* Latest Content */}
       <section>
         <h3>Latest stories</h3>
@@ -66,7 +57,7 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-  console.log('frontmatter.trackrecord :>> ', frontmatter.trackrecord);
+  console.log('frontmatter.image :>> ', frontmatter.image);
   return (
     <Layout>
       <IndexPageTemplate

@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: We put the strategy in strategic risk management
-image: /img/media-placeholder.png
+image: /img/homepage-masthead-background.svg
 heading: We put the strategy in strategic risk management
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
