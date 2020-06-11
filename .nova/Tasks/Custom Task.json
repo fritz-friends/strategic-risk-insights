@@ -1,0 +1,13 @@
+{
+  "actions" : {
+    "build" : {
+      "enabled" : true,
+      "script" : "yarn build"
+    },
+    "run" : {
+      "enabled" : true,
+      "script" : "yarn start"
+    }
+  },
+  "identifier" : "3AEFC3BF-3289-4D06-AEE8-50D1853E86B1"
+}
