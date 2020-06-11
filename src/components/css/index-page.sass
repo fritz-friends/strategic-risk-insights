@@ -1,5 +1,6 @@
 .intro
-    padding: 72px 24px 0
+    position: relative
+    padding: 72px 24px 408px
     background-image: url("../../static/img/homepage-masthead-background.svg")
     background-position: bottom center
     background-size: 100%
@@ -10,9 +11,17 @@
 
     h1
         text-align: center
+        margin: 0
+        max-width: 600px
 
     img
-        transform: translateY(88px)
+        position: absolute
+        left: 50%
+        top: 256px
+        transform: translateX(-50%)
+        width: 814px
+        height: 458px
+        transform-origin: 50% 0
         width: 814px
         height: 458px
 
