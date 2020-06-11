@@ -23,7 +23,7 @@ export const IndexPageTemplate = ({
       </section>
 
       {/* services */}
-      <section>
+      <section className="service-blurbs">
         <Features gridItems={intro.blurbs} />
       </section>
       {/* Latest Content */}
