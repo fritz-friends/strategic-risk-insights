@@ -14,7 +14,7 @@ export const IndexPageTemplate = ({ title, videoSourceURL, intro, trackrecord })
     <section className="intro">
       <h1>{title}</h1>
       <div id="video">
-        <ReactPlayer url={videoSourceURL} />
+        <ReactPlayer url={videoSourceURL} width="814px" height="458px" />
       </div>
 
     </section>
