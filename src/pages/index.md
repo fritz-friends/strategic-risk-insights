@@ -1,13 +1,11 @@
 ---
 templateKey: index-page
 title: We put the strategy in strategic risk management
-image: /img/homepage-masthead-background.svg
-heading: We put the strategy in strategic risk management
+videoSourceURL: https://www.youtube.com/embed/8TaP34F2GVc
+videoTitle: "Introduction"
+heading: We put the strategy in strategic risk management.
 description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+  We put the strategy in strategic risk management. We put the strategy in strategic risk management. We put the strategy in strategic risk management. We put the strategy in strategic risk management. We put the strategy in strategic risk management. We put the strategy in strategic risk management. We put the strategy in strategic risk management. We put the strategy in strategic risk management. We put the strategy in strategic risk management.
 intro:
   blurbs:
     - image: /img/media-placeholder.png

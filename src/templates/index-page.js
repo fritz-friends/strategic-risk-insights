@@ -1,18 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
+import ReactPlayer from "react-player/lazy";
 
 import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
-export const IndexPageTemplate = ({ image, title, intro, trackrecord }) => (
+export const IndexPageTemplate = ({ title, videoSourceURL, intro, trackrecord }) => (
   <div>
     {/* Introduction */}
     <section className="intro">
       <h1>{title}</h1>
-      <img src="../img/media-placeholder.png" />
+      <div id="video">
+        <ReactPlayer url={videoSourceURL} />
+      </div>
+
     </section>
 
     {/* services */}
@@ -39,7 +43,7 @@ export const IndexPageTemplate = ({ image, title, intro, trackrecord }) => (
 );
 
 IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  videoSourceURL: PropTypes.string,
   title: PropTypes.string,
   intro: PropTypes.shape({
     blurbs: PropTypes.array
@@ -49,11 +53,10 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
-  console.log("frontmatter.image :>> ", frontmatter.image);
   return (
     <Layout>
       <IndexPageTemplate
-        image={frontmatter.image}
+        videoSourceURL={frontmatter.videoSourceURL}
         title={frontmatter.title}
         intro={frontmatter.intro}
         trackrecord={frontmatter.trackrecord}
@@ -82,14 +85,8 @@ export const pageQuery = graphql`
     ) {
       frontmatter {
         title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-          id
-        }
+        videoSourceURL
+        videoTitle
         heading
         intro {
           blurbs {

@@ -36,7 +36,8 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
           - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
+          - {label: Video Source URL, name: videoSourceURL, widget: string}
+          - {label: Video Title, name: videoTitle, widget: string}
           - {label: Heading, name: heading, widget: string}
           - {label: Intro, name: intro, widget: object, fields: [{label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Title, name: title, widget: title}, {label: Text, name: text, widget: text}]}]}
           - {label: Track Record, name: trackrecord, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}]}
