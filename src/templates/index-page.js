@@ -24,11 +24,11 @@ export const IndexPageTemplate = ({ title, videoSourceURL, intro, trackrecord })
       <Features gridItems={intro.blurbs} />
       <Link to="/services" className="btn btn-reversed btn-large">See Our Services</Link>
     </section>
+
     {/* Latest Content */}
-    <section>
-      <h3>Latest stories</h3>
+    <section className="blogroll">
+      <h1>Latest stories</h1>
       <BlogRoll />
-      <Link to="/blog">Read more</Link>
     </section>
 
     {/* Track Record */}

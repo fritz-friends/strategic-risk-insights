@@ -9,34 +9,16 @@ class BlogRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="columns is-multiline">
+      <div className="blogroll-article">
         {posts &&
           posts.map(({ node: post }) => (
-            <div key={post.id}>
+            <div className="blogroll-article column" key={post.id}>
               <article>
-                <header>
-                  {post.frontmatter.featuredimage ? (
-                    <div>
-                      <PreviewCompatibleImage
-                        imageInfo={{
-                          image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                        }}
-                      />
-                    </div>
-                  ) : null}
-                  <p className="post-meta">
-                    <Link
-                      to={post.fields.slug}
-                    >
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <span>
-                      {post.frontmatter.date}
-                    </span>
-                  </p>
-                </header>
+                <h2>
+                  <Link to={post.fields.slug} >
+                    {post.frontmatter.title}
+                  </Link>
+                </h2>
                 <p>
                   {post.excerpt}
                   <br />
@@ -68,6 +50,7 @@ export default () => (
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
           filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+          limit: 2
         ) {
           edges {
             node {
