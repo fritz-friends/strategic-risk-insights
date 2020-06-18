@@ -1,22 +1,26 @@
-.blogroll
-    padding: 40px
+.blogroll--home
+    padding: 64px 24px 72px
     background-color: $sri-white
     color: $sri-black
     display: flex
     flex-direction: column
     align-items: center
+    h1
+        margin: 0 0 48px
+
+.blogroll-articles
+    padding: 0 106px
+    .blogroll--home &
+        display: flex
+    
+.blogroll-article
+    padding: 0 24px
     h2
         margin: 0 0 16px
+        a
+            text-decoration: none
+            &:hover
+                text-decoration: underline
+                color: $sri-violet
     p
         margin: 0
-
-.blogroll-article
-    padding: 22px 24px
-    display: flex
-    background-color: $sri-white
-    color: $sri-black
-    font-family: Roboto
-    font-style: normal
-    font-weight: normal
-    font-size: 16px
-    line-height: 20px

@@ -18,10 +18,12 @@ export const BlogPostTemplate = ({
 
   return (
     <section>
-      {helmet || ''}
-      <h1>
-        {title}
-      </h1>
+      <section className="subpage-masthead">
+        {helmet || ''}
+        <h1>
+          {title}
+        </h1>
+      </section>
       <p>{description}</p>
       <PostContent content={content} />
       {tags && tags.length ? (

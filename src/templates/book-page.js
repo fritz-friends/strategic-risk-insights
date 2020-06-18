@@ -15,41 +15,41 @@ export const BookTemplate = ({ markup }) => {
 
   return (
     <div>
-      {/* Reviews */}
-      <section>
-        <h2>
-          {title}
-        </h2>
+    <section className="subpage-masthead">
+      <h1>{title}</h1>
+    </section>
+    
+    <section>
+      <div>
         <div>
-          <div>
-            <PreviewCompatibleImage imageInfo={markup.frontmatter} />
-          </div>
-          <div>
-            {firstReview}
-          </div>
-          <div>
-            {firstReviewer}
-          </div>
+        <PreviewCompatibleImage imageInfo={markup.frontmatter} />
         </div>
         <div>
-          <div>
-            {secondReview}
-          </div>
-          <div>
-            {secondReviewer}
-          </div>
+        {firstReview}
         </div>
-      </section>
-
-      {/* Buy Now */}
-      <section>
-
-      </section>
-
-      {/* Description */}
-      <section>
-        {description}
-      </section>
+        <div>
+        {firstReviewer}
+        </div>
+      </div>
+      <div>
+        <div>
+        {secondReview}
+        </div>
+        <div>
+        {secondReviewer}
+        </div>
+      </div>
+    </section>
+    
+    {/* Buy Now */}
+    <section>
+    
+    </section>
+    
+    {/* Description */}
+    <section>
+      {description}
+    </section>
     </div>
   )
 }

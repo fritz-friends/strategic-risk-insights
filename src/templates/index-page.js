@@ -27,7 +27,7 @@ export const IndexPageTemplate = ({ title, videoSourceURL, intro, trackrecord })
     </section>
 
     {/* Latest Content */}
-    <section className="blogroll">
+    <section className="blogroll--home">
       <h1>Latest stories</h1>
       <BlogRoll />
     </section>

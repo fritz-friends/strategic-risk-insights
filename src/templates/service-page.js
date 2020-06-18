@@ -13,20 +13,10 @@ export const ServicePageTemplate = ({
 }) => (
     <div className="content">
       {/* our services section */}
-      <section>
-        <div
-          className="full-width-image-container margin-top-0"
-          style={{
-            backgroundImage: `url(${
-              !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-              })`,
-          }}
-        >
-          <h2>
+      <section className="subpage-masthead">
+          <h1>
             {title}
-          </h2>
-        </div>
-        <Features gridItems={intro.blurbs} />
+          </h1>
       </section>
 
       {/* highlighted service */}

@@ -9,7 +9,7 @@ class BlogRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="blogroll-article">
+      <div className="blogroll-articles">
         {posts &&
           posts.map(({ node: post }) => (
             <div className="blogroll-article column" key={post.id}>
