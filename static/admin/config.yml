@@ -27,6 +27,21 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
 
+  - name: "podcast"
+    label: "Podcast"
+    folder: "src/pages/podcast"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "podcast-page"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
+      - {label: "Featured Image", name: "featuredimage", widget: image}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list"}
+
   - name: "pages"
     label: "Pages"
     files:
@@ -40,7 +55,7 @@ collections:
           - {label: Video Title, name: videoTitle, widget: string}
           - {label: Heading, name: heading, widget: string}
           - {label: Intro, name: intro, widget: object, fields: [{label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Title, name: title, widget: title}, {label: Text, name: text, widget: text}]}]}
-          - {label: Track Record, name: trackrecord, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}]}
+          - {label: Track Record, name: trackrecord, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Testimonials, name: testimonials, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Testimonial, name: testimonial, widget: text}, {label: Testifier, name: testifier, widget: text}]}]}
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"

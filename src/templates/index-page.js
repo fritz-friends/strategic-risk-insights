@@ -7,6 +7,7 @@ import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import TrackRecordSlider from '../components/trackRecordSlider';
 
 export const IndexPageTemplate = ({ title, videoSourceURL, intro, trackrecord }) => (
   <div>
@@ -24,20 +25,17 @@ export const IndexPageTemplate = ({ title, videoSourceURL, intro, trackrecord })
       <Features gridItems={intro.blurbs} />
       <Link to="/services" className="btn btn-reversed btn-large">See Our Services</Link>
     </section>
+
     {/* Latest Content */}
-    <section>
-      <h3>Latest stories</h3>
+    <section className="blogroll">
+      <h1>Latest stories</h1>
       <BlogRoll />
-      <Link to="/blog">Read more</Link>
     </section>
 
     {/* Track Record */}
     <section>
-      <div>
-        <PreviewCompatibleImage imageInfo={trackrecord[0]} />
-        <h2>{trackrecord[0].heading}</h2>
-        <p>{trackrecord[0].description}</p>
-      </div>
+      <h1>{trackrecord.heading}</h1>
+      <TrackRecordSlider testimonials={trackrecord.testimonials} />
     </section>
   </div>
 );
@@ -80,7 +78,6 @@ export const pageQuery = graphql`
     markdownRemark(
       frontmatter: {
         templateKey: { eq: "index-page" }
-        trackrecord: { elemMatch: { description: {} } }
       }
     ) {
       frontmatter {
@@ -103,16 +100,19 @@ export const pageQuery = graphql`
           }
         }
         trackrecord {
-          image {
-            childImageSharp {
-              fluid(maxWidth: 240, quality: 64) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-            id
-          }
           heading
-          description
+          testimonials {
+            image {
+              childImageSharp {
+                fluid(maxWidth: 240, quality: 64) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+              id
+            }
+            testimonial
+            testifier
+          }
         }
       }
     }
