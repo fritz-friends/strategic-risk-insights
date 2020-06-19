@@ -8,7 +8,7 @@ import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 const TrackRecordSlider = ({ testimonials }) => {
     const settings = {
         className: "trackrecord-slide",
-        // dotsClass: "trackrecord-dots",
+        dotsClass: "trackrecord-dots",
         dots: true,
         infinite: true,
         speed: 1000,
