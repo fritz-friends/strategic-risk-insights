@@ -7,7 +7,7 @@ import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
-import TrackRecordSlider from '../components/trackRecordSlider';
+import TrackRecordSlider from '../components/TrackRecordSlider';
 
 export const IndexPageTemplate = ({ title, videoSourceURL, intro, trackrecord }) => (
   <div>
@@ -33,7 +33,7 @@ export const IndexPageTemplate = ({ title, videoSourceURL, intro, trackrecord })
     </section>
 
     {/* Track Record */}
-    <section>
+    <section className="trackrecord--home">
       <h1>{trackrecord.heading}</h1>
       <TrackRecordSlider testimonials={trackrecord.testimonials} />
     </section>

@@ -7,6 +7,8 @@ import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 const TrackRecordSlider = ({ testimonials }) => {
     const settings = {
+        className: "trackrecord-slide",
+        // dotsClass: "trackrecord-dots",
         dots: true,
         infinite: true,
         speed: 1000,
@@ -39,9 +41,13 @@ const TrackRecordSlider = ({ testimonials }) => {
         <div>
             <Slider {...settings} >
                 {testimonials.map((testimonial, i) => (
-                    <div className="column" id={i}>
-                        <PreviewCompatibleImage imageInfo={testimonial.image} />
-                        <p>{testimonial.testimonial}</p>
+                    <div id={i}>
+                        <div className="slide-image">
+                            <PreviewCompatibleImage imageInfo={testimonial.image} />
+                        </div>
+                        <div className="slide-testimonial">
+                            {testimonial.testimonial}
+                        </div>
                         <p>{testimonial.testifier}</p>
                     </div>
                 ))}
