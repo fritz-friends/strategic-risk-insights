@@ -39,7 +39,9 @@ export const IndexPageTemplate = ({
 			<BlogRoll />
 		</section>
 
-		<Contact />
+		<section>
+			<Contact />
+		</section>
 
 		{/* Track Record */}
 		<section className="trackrecord--home">

@@ -1,7 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Checkbox from "rc-checkbox";
-
 const Contact = ({ chapter, speak }) => {
 	return (
 		<div className="contact">
@@ -12,7 +10,11 @@ const Contact = ({ chapter, speak }) => {
 				name="contact"
 			>
 				<input type="hidden" name="bot-field" />
-				<input type="hidden" name="sri-contact" value="contact" />
+				<input
+					type="hidden"
+					name={chapter ? "sri-chapter" : "sri-contact"}
+					value="contact"
+				/>
 
 				<h2>
 					{speak
@@ -61,20 +63,22 @@ const Contact = ({ chapter, speak }) => {
 				</div>
 
 				<div>
-					<label>
-						<Checkbox defaultChecked className="checkbox" />
+					<label className="checkbox-container">
 						Receive our Quarterly Newsletter
+						<input type="checkbox" name="newsletter" id="newsletter" checked />
+						<span class="checkmark"></span>
 					</label>
 				</div>
 
 				<div>
-					<label>
-						<Checkbox className="checkbox" />
+					<label className="checkbox-container">
 						Speak with one of our experts
+						<input type="checkbox" name="newsletter" id="newsletter" />
+						<span class="checkmark"></span>
 					</label>
 				</div>
 
-				<div className="contact button">
+				<div className="contact-button">
 					<button className="btn-large btn-reversed" type="submit">
 						Subscribe
 					</button>
