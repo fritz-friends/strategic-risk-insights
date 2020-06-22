@@ -13,6 +13,7 @@ const Testimonials = ({ testimonials }) => (
         </div>
       </article>
     ))}
+    
   </div>
 )
 

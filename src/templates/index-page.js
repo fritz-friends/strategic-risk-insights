@@ -35,7 +35,7 @@ export const IndexPageTemplate = ({
 
 		{/* Latest Content */}
 		<section className="blogroll--home">
-			<h1>Latest stories</h1>
+			<h2 className="heading-1">Latest stories</h2>
 			<BlogRoll />
 		</section>
 
@@ -45,8 +45,13 @@ export const IndexPageTemplate = ({
 
 		{/* Track Record */}
 		<section className="trackrecord--home">
-			<h1>{trackrecord.heading}</h1>
+			<h2 className="heading-1">{trackrecord.heading}</h2>
 			<TrackRecordSlider testimonials={trackrecord.testimonials} />
+			<div className="util--centered-wrapper">
+				<Link to="/case-studies" className="btn btn-large">
+					Read Our Case Studies
+				</Link>
+			</div>
 		</section>
 	</div>
 );
