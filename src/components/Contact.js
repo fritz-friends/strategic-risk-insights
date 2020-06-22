@@ -79,7 +79,7 @@ const Contact = ({ chapter, speak }) => {
 				</div>
 
 				<div className="contact-button">
-					<button className="btn-large btn-reversed" type="submit">
+					<button className="btn btn-large btn-reversed" type="submit">
 						Subscribe
 					</button>
 				</div>

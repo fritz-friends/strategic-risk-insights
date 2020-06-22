@@ -39,7 +39,7 @@ export const IndexPageTemplate = ({
 			<BlogRoll />
 		</section>
 
-		<section>
+		<section className="contact-section">
 			<Contact />
 		</section>
 
