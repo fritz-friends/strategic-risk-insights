@@ -26,6 +26,11 @@ export const IndexPageTemplate = ({
 
 		{/* services */}
 		<section className="service-blurbs">
+			<img
+				src="/img/3rd-paradigm-illustration.svg"
+				alt="The 3rd Paradigm"
+				className="paradigm-illustration"
+      />
 			<Features gridItems={intro.blurbs} />
 			<Link to="/services" className="btn btn-reversed btn-large">
 				See Our Services
