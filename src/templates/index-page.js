@@ -7,7 +7,6 @@ import BlogRoll from "../components/BlogRoll";
 import Contact from "../components/Contact";
 import Features from "../components/Features";
 import Layout from "../components/Layout";
-import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 import TrackRecordSlider from "../components/TrackRecordSlider";
 
 export const IndexPageTemplate = ({
