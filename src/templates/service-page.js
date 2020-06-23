@@ -16,17 +16,18 @@ export const ServicePageTemplate = ({
 		{/* our services section */}
 		<section className="subpage-masthead">
 			<h1>{title}</h1>
+		</section>
+		<div>
 			{intro.services.map((service, i) => {
 				return (
 					<div key={i}>
-						<h2>{service.service}</h2>
-						<p>{service.text}</p>
+					<h2>{service.service}</h2>
+					<p>{service.text}</p>
 					</div>
 				);
 			})}
 			<PreviewCompatibleImage imageInfo={image} />
-		</section>
-
+		</div>
 		{/* highlighted service */}
 		<section>
 			<h1>{highlightedservice.heading}</h1>
