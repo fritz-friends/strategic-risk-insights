@@ -17,36 +17,43 @@ export const ServicePageTemplate = ({
 		<section className="subpage-masthead">
 			<h1>{title}</h1>
 		</section>
-		<div>
+		<div className="services-container">
 			{intro.services.map((service, i) => {
 				return (
-					<div key={i}>
-					<h2>{service.service}</h2>
-					<p>{service.text}</p>
+					<div className="service" key={i}>
+						<h2>{service.service}</h2>
+						<p>{service.text}</p>
 					</div>
 				);
 			})}
-			<PreviewCompatibleImage imageInfo={image} />
+			<div className="services-picture">
+				<PreviewCompatibleImage imageInfo={image} />
+			</div>
 		</div>
+
 		{/* highlighted service */}
-		<section>
-			<h1>{highlightedservice.heading}</h1>
-			<p>{highlightedservice.description}</p>
-			<ul>
-				{highlightedservice.bullets.map((bullet, i) => {
-					return bullet ? <li key={i}>{bullet.bullet}</li> : null;
-				})}
-			</ul>
+		<section className="highlightedservice-container">
+			<div className="highlightedservice">
+				<h1>{highlightedservice.heading}</h1>
+				<p>{highlightedservice.description}</p>
+				<ul>
+					{highlightedservice.bullets.map((bullet, i) => {
+						return bullet ? <li key={i}>{bullet.bullet}</li> : null;
+					})}
+				</ul>
+			</div>
 		</section>
 
 		{/* customers */}
-		<section>
+		<section className="services-customers-container">
 			<h1>{customers.heading}</h1>
-			{customers.logos.map((logo, i) => (
-				<div className="services-customers" key={i}>
-					<PreviewCompatibleImage imageInfo={logo.logo} />
-				</div>
-			))}
+			<div className="services-customer-logo-container">
+				{customers.logos.map((logo, i) => (
+					<div className="services-customer-logo" key={i}>
+						<PreviewCompatibleImage imageInfo={logo.logo} />
+					</div>
+				))}
+			</div>
 		</section>
 
 		<section className="contact-section">
