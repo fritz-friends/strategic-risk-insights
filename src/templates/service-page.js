@@ -18,23 +18,25 @@ export const ServicePageTemplate = ({
 			<h1>{title}</h1>
 		</section>
 		<div className="services-container">
-			{intro.services.map((service, i) => {
-				return (
-					<div className="service" key={i}>
-						<h2>{service.service}</h2>
-						<p>{service.text}</p>
-					</div>
-				);
-			})}
+			<div className="services">
+				{intro.services.map((service, i) => {
+					return (
+						<div className="service" key={i}>
+							<h2>{service.service}</h2>
+							<p>{service.text}</p>
+						</div>
+					);
+				})}
+			</div>
 			<div className="services-picture">
-				<PreviewCompatibleImage imageInfo={image} />
+				<PreviewCompatibleImage imageInfo={image} className="services-picture" />
 			</div>
 		</div>
 
 		{/* highlighted service */}
 		<section className="highlightedservice-container">
 			<div className="highlightedservice">
-				<h1>{highlightedservice.heading}</h1>
+				<h2 className="heading-1">{highlightedservice.heading}</h2>
 				<p>{highlightedservice.description}</p>
 				<ul>
 					{highlightedservice.bullets.map((bullet, i) => {
@@ -46,7 +48,7 @@ export const ServicePageTemplate = ({
 
 		{/* customers */}
 		<section className="services-customers-container">
-			<h1>{customers.heading}</h1>
+			<h2 className="heading-1">{customers.heading}</h2>
 			<div className="services-customer-logo-container">
 				{customers.logos.map((logo, i) => (
 					<div className="services-customer-logo" key={i}>

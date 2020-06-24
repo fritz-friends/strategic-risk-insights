@@ -1,24 +1,74 @@
 .services-container
-    margin-left: 40px
-    padding: 40px 0px 0px 40px
+    
+    // display: grid
+    // grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+    // grid-template-areas: ". services services services services services services . photo photo photo photo" ". services services services services services services . photo photo photo photo" ". services services services services services services . . . . ."
+    // column-gap: 48px
+    padding: 40px 24px 80px 131px
+    position: relative
+    background-image: url("../../static/img/services-curved-pipes.svg")
+    background-repeat: no-repeat
+    background-position: 64px 24px
+    
+    &:before
+        content: ""
+        position: absolute
+        right: 0
+        top: 224px
+        width: 508px
+        height: calc(100% - 224px)
+        background-image: url("../../static/img/services-background.jpg")
+        background-size: cover
+        background-position: center
+        border-top-left-radius: 72px
 
     .services-picture
+        // grid-area: photo
+        // grid-row-start: 1
+        // grid-row-end: 2
+        // width: 379px
+        position: absolute
+        right: 24px
+        top: 40px
         width: 379px
-        height: 240px
+        height: auto
 
+    .services
+        // width: 592px
+        width: calc(100% - 557px)
+        // grid-area: services
+        // grid-row-start: 1
+        // grid-row-end: 3
+        padding-top: 32px
+    
     .service
-        width: 592px
+        padding-bottom: 40px
+        &:last-of-type
+            padding-bottom: 0
+        h2
+            margin-top: 0
+            margin-bottom: 16px
+        p
+            margin-bottom: 0
 
 .highlightedservice-container
+    padding: 64px 24px
     background-color: $sri-black
+    background-image: url("../../static/img/speed-lines.svg")
+    background-repeat: repeat-x
+    background-position: left 24px
     display: flex
     flex-direction: column
     align-items: center
-    h1
+    h2
         color: $sri-white
         text-align: center
+        margin: 0 0 24px
     p
         color: $sri-white
+    ul
+        padding-left: 20px
+        margin-bottom: 0
     li
         color: $sri-white
 
@@ -29,15 +79,22 @@
     display: flex
     flex-direction: column
     align-items: center
+    // width: 100%
+    padding: 64px 24px 40px
+    
+    h2
+        color: $sri-black
+        margin: 0
 
     .services-customer-logo-container
         display: flex
         flex-direction: row
         flex-wrap: wrap
         justify-content: space-around
-        width: 60%
+        width: 100%
+        padding: 8px 0 0
 
         .services-customer-logo
-            margin: 40px
-            width: 240px
-            height: 176px
+            margin: 24px
+            width: calc(33.33% - 48px)
+            height: auto
