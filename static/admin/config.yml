@@ -181,6 +181,28 @@ collections:
                     },
                   ],
             }
+      - file: "src/pages/cases/index.md"
+        label: "Cases Page"
+        name: "cases"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "cases-page",
+            }
+          - { label: Title, name: title, widget: string }
+          - {
+              label: Cases,
+              name: cases,
+              widget: list,
+              fields:
+                [
+                  { label: Case, name: case, widget: text },
+                  { label: Logo, name: logo, widget: image },
+                  { label: Description, name: description, widget: text },
+                ],
+            }
       - file: "src/pages/book/index.md"
         label: "Book Page"
         name: "book"

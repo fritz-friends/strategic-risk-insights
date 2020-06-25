@@ -29,7 +29,10 @@ export const ServicePageTemplate = ({
 				})}
 			</div>
 			<div className="services-picture">
-				<PreviewCompatibleImage imageInfo={image} className="services-picture" />
+				<PreviewCompatibleImage
+					imageInfo={image}
+					className="services-picture"
+				/>
 			</div>
 		</div>
 
@@ -59,7 +62,7 @@ export const ServicePageTemplate = ({
 		</section>
 
 		<section className="contact-section">
-			<Contact />
+			<Contact speak />
 		</section>
 	</div>
 );
