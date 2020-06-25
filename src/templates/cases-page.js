@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Contact from "../components/Contact";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
@@ -22,6 +22,11 @@ export const CasesTemplate = ({ markup }) => {
 						</div>
 						<h2>{study.case}</h2>
 						<p>{study.description}</p>
+						<div className="btn-wrapper">
+							<Link className="btn btn-small" to="/cases">
+								Read Case Study
+							</Link>
+						</div>
 					</div>
 				))}
 			</section>
