@@ -12,7 +12,7 @@ export default class PodcastIndexPage extends React.Component {
           Podcast
           </h1>
         </section>
-        <section>
+        <section className="podcast-index-wrapper">
           <BlogRoll />
         </section>
       </Layout>

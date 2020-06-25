@@ -12,7 +12,7 @@ export default class BlogIndexPage extends React.Component {
             Blog
             </h1>
         </section>
-        <section>
+        <section className="blog-index-wrapper">
           <BlogRoll />
         </section>
       </Layout>
