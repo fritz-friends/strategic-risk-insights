@@ -1,29 +1,32 @@
 .intro
     position: relative
-    padding: 72px 24px 408px
+    padding: 32px 24px 360px
     background-image: url("../../static/img/homepage-intro-background-pattern.svg")
     background-position: left bottom
     background-repeat: repeat-x
     display: flex
     flex-direction: column
     align-items: center
-
+    @media screen and (min-width:56em)
+        padding: 72px 24px 408px
     h1
         text-align: center
         margin: 0
+        width: 100%
         max-width: 600px
         background-color: transparentize($sri-white, .2)
 
-    #video
+    .video
         position: absolute
         left: 50%
-        top: 256px
+        top: 152px
         transform: translateX(-50%)
-        width: 814px
-        height: 458px
+        width: calc(100% - 96px)
+        max-width: 814px
+        height: auto
         transform-origin: 50% 0
-        width: 814px
-        height: 458px
+        @media screen and (min-width:56em)
+            top: 256px
 
 .service-blurbs
     padding: 0 0 48px

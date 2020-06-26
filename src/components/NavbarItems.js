@@ -23,6 +23,9 @@ const NavbarItems = ({ className }) => {
 			<Link className={className} to="/about" activeClassName="current-page">
 				About
 			</Link>
+			<Link className={className + " client-login"} to="/client-login" activeClassName="current-page">
+				Client Login
+			</Link>
 		</>
 	);
 };
