@@ -1,9 +1,21 @@
 .subpage-masthead
-	padding: 72px 24px 40px
+	padding: 40px 24px 40px
 	position: relative;
 	background-image: url("../../static/img/masthead-border.svg")
 	background-position: left bottom
 	background-repeat: repeat-x
+	@media screen and (min-width:25em)
+		padding: 48px 24px 40px
+		font-size: 24px
+		line-height: 32px
+	@media screen and (min-width:45em)
+		padding: 56px 24px 40px
+		font-size: 32px
+		line-height: 40px
+	@media screen and (min-width:56em)
+		padding: 72px 24px 40px
+		font-size: 40px
+		line-height: 48px
 	h1
 		margin: 0
 		text-align: center
