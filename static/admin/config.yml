@@ -201,6 +201,7 @@ collections:
                   { label: Case, name: case, widget: text },
                   { label: Logo, name: logo, widget: image },
                   { label: Description, name: description, widget: text },
+                  { label: Link, name: link, widget: text },
                 ],
             }
       - file: "src/pages/book/index.md"

@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
-import ReactPlayer from "react-player/lazy";
 
 import BlogRoll from "../components/BlogRoll";
 import Contact from "../components/Contact";
@@ -20,7 +19,7 @@ export const IndexPageTemplate = ({
 		<section className="intro">
 			<h1>{title}</h1>
 			<div id="video">
-				<ReactPlayer url={videoSourceURL} width="814px" height="458px" />
+				{/* <ReactPlayer url={videoSourceURL} width="814px" height="458px" /> */}
 			</div>
 		</section>
 
@@ -30,7 +29,7 @@ export const IndexPageTemplate = ({
 				src="/img/3rd-paradigm-illustration.svg"
 				alt="The 3rd Paradigm"
 				className="paradigm-illustration"
-      />
+			/>
 			<Features gridItems={intro.blurbs} />
 			<Link to="/services" className="btn btn-reversed btn-large">
 				See Our Services
