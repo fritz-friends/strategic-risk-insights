@@ -19,9 +19,9 @@ export const IndexPageTemplate = ({
 		{/* Introduction */}
 		<section className="intro">
 			<h1>{title}</h1>
-			<div id="video">
-				<ReactPlayer url={videoSourceURL} width="814px" height="458px" />
-			</div>
+			<video className="video" controls>
+				<source src="https://assets.noahread.net/blog/shanghai_dancing.mp4" type="video/mp4" />
+			</video>
 		</section>
 
 		{/* services */}
