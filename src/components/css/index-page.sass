@@ -1,12 +1,23 @@
 .intro
     position: relative
-    padding: 32px 24px 360px
+    padding: 32px 24px 120px
     background-image: url("../../static/img/homepage-intro-background-pattern.svg")
-    background-position: left bottom
+    background-position: left -150%
     background-repeat: repeat-x
     display: flex
     flex-direction: column
     align-items: center
+    @media screen and (min-width:22em)
+        padding: 32px 24px 160px
+    @media screen and (min-width:28em)
+        background-position: left bottom
+        padding: 32px 24px 200px
+    @media screen and (min-width:32em)
+        padding: 32px 24px 240px
+    @media screen and (min-width:38em)
+        padding: 32px 24px 300px
+    @media screen and (min-width:45em)
+        padding: 32px 24px 360px
     @media screen and (min-width:56em)
         padding: 72px 24px 408px
     h1
@@ -19,12 +30,14 @@
     .video
         position: absolute
         left: 50%
-        top: 152px
+        top: 120px
         transform: translateX(-50%)
         width: calc(100% - 96px)
         max-width: 814px
         height: auto
         transform-origin: 50% 0
+        @media screen and (min-width:45em)
+            top: 152px
         @media screen and (min-width:56em)
             top: 256px
 
@@ -49,8 +62,10 @@
     display: flex
     justify-content: center
     padding-bottom: 48px
-    margin-top: -80px
+    margin-top: -40px
     width: 100%
+    @media screen and (min-width:38em)
+        margin-top: -80px
     > div
         width: 33.33%
 

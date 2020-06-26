@@ -10,9 +10,14 @@
 
 .blogroll-articles
     .blogroll--home &
-        padding: 0 106px
+        padding: 0
+        @media screen and (min-width:56em)
+            padding: 0 106px
     .blogroll--home &
         display: flex
+        flex-direction: column
+        @media screen and (min-width:42em)
+            flex-direction: row
     .blog-index-wrapper &, .podcast-index-wrapper &
         padding: 72px 0
         display: flex
@@ -24,8 +29,12 @@
     width: calc(100% - 48px)
     max-width: 800px
     .blogroll--home &
-        padding: 0 24px
+        padding: 0 0 48px
         width: inherit
+        &:last-of-type
+            padding-bottom: 0
+        @media screen and (min-width:42em)
+            padding: 0 24px
     h2
         margin: 0 0 16px
         a
