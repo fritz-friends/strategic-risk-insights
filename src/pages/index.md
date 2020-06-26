@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: We put the strategy in strategic risk management
-videoSourceURL: https://www.youtube.com/embed/8TaP34F2GVc
+videoSourceURL: https://assets.noahread.net/blog/shanghai_dancing.mp4
 videoTitle: "Introduction"
 heading: We put the strategy in strategic risk management.
 description: >-
@@ -21,18 +21,18 @@ intro:
       text: >
         Develop text
 trackrecord:
-    heading: Our Track Record
-    testimonials:
-      - image: /img/media-placeholder.png
-        testimonial: >
-          “This is the first testimonial. In culpa consectetur officia sit. Proident mollit magna non culpa. Officia sit veniam cillum nostrud amet. Eu cillum occaecat aliqua reprehenderit enim cupidatat qui labore excepteur.”
-        testifier: Paul Newman, Racecar Driving Ghost
-      - image: /img/media-placeholder.png
-        testimonial: >
-          “This is the second testimonial. In culpa consectetur officia sit. Proident mollit magna non culpa. Officia sit veniam cillum nostrud amet. Eu cillum occaecat aliqua reprehenderit enim cupidatat qui labore excepteur.”
-        testifier: Joe Schlabotnic, World Famous Baseball Player
-      - image: /img/media-placeholder.png
-        testimonial: >
-          “This is the third testimonial. In culpa consectetur officia sit. Proident mollit magna non culpa. Officia sit veniam cillum nostrud amet. Eu cillum occaecat aliqua reprehenderit enim cupidatat qui labore excepteur.”
-        testifier: Chuck Norris, Why am I the 3rd Testifier?
+  heading: Our Track Record
+  testimonials:
+    - image: /img/media-placeholder.png
+      testimonial: >
+        “This is the first testimonial. In culpa consectetur officia sit. Proident mollit magna non culpa. Officia sit veniam cillum nostrud amet. Eu cillum occaecat aliqua reprehenderit enim cupidatat qui labore excepteur.”
+      testifier: Paul Newman, Racecar Driving Ghost
+    - image: /img/media-placeholder.png
+      testimonial: >
+        “This is the second testimonial. In culpa consectetur officia sit. Proident mollit magna non culpa. Officia sit veniam cillum nostrud amet. Eu cillum occaecat aliqua reprehenderit enim cupidatat qui labore excepteur.”
+      testifier: Joe Schlabotnic, World Famous Baseball Player
+    - image: /img/media-placeholder.png
+      testimonial: >
+        “This is the third testimonial. In culpa consectetur officia sit. Proident mollit magna non culpa. Officia sit veniam cillum nostrud amet. Eu cillum occaecat aliqua reprehenderit enim cupidatat qui labore excepteur.”
+      testifier: Chuck Norris, Why am I the 3rd Testifier?
 ---
