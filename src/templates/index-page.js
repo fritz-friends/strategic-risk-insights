@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 
-import BlogRoll from "../components/BlogRoll";
+import BlogRollForIndex from "../components/BlogRollForIndex";
 import Contact from "../components/Contact";
 import Features from "../components/Features";
 import Layout from "../components/Layout";
@@ -39,7 +39,7 @@ export const IndexPageTemplate = ({
 		{/* Latest Content */}
 		<section className="blogroll--home">
 			<h2 className="heading-1">Latest stories</h2>
-			<BlogRoll />
+			<BlogRollForIndex />
 		</section>
 
 		<section className="contact-section">

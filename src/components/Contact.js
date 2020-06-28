@@ -65,7 +65,12 @@ const Contact = ({ chapter, speak }) => {
 				<div>
 					<label className="checkbox-container">
 						Receive our Quarterly Newsletter
-						<input type="checkbox" name="newsletter" id="newsletter" checked />
+						<input
+							type="checkbox"
+							name="newsletter"
+							id="newsletter"
+							defaultChecked
+						/>
 						<span className="checkmark"></span>
 					</label>
 				</div>

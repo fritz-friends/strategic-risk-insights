@@ -956,6 +956,13 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/runtime@^7.10.3":
+  version "7.10.3"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.10.3.tgz#670d002655a7c366540c67f6fd3342cd09500364"
+  integrity sha512-RzGO0RLSdokm9Ipe/YD+7ww8X2Ro79qiXZF3HU9ljrM+qnJmH1Vqth+hbiQZy761LnMJTMitHDuKVYTk3k4dLw==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/standalone@^7.9.6":
   version "7.10.2"
   resolved "https://registry.yarnpkg.com/@babel/standalone/-/standalone-7.10.2.tgz#49dbbadcbc4b199df064d7d8b3e21c915b84abdb"
@@ -7102,6 +7109,13 @@ gatsby-admin@^0.1.56:
     urql "^1.9.7"
     yup "^0.29.0"
 
+gatsby-awesome-pagination@^0.3.6:
+  version "0.3.6"
+  resolved "https://registry.yarnpkg.com/gatsby-awesome-pagination/-/gatsby-awesome-pagination-0.3.6.tgz#e7e2d0af0cebd53a51957414e1e9749f2e0e2c02"
+  integrity sha512-gVt5tnDP8Va+Y02OrG8k/HocGx7NKTnvGGKFzz2E+ChHObBbac6PXeOEOUseFrCqO/zKLhF8JWTfWofGsy7oQA==
+  dependencies:
+    lodash "^4.17.15"
+
 gatsby-cli@^2.12.40:
   version "2.12.40"
   resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.12.40.tgz#d80d5dfd0d188d9a0e5a792cb5007279b2b46569"
@@ -7228,6 +7242,21 @@ gatsby-page-utils@^0.2.7:
     lodash "^4.17.15"
     micromatch "^3.1.10"
 
+gatsby-plugin-create-client-paths@^2.3.6:
+  version "2.3.6"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-create-client-paths/-/gatsby-plugin-create-client-paths-2.3.6.tgz#ecdf2dd899da37ab0624844b0904b098b50679b4"
+  integrity sha512-HJkowbuET2ykQsYfjbKBrK8Iftuw71UAhj02Cbshw7dxe6s03dE9r8ba+dNoaolh4ul7jo+WbZHFjSc5brGakA==
+  dependencies:
+    "@babel/runtime" "^7.10.3"
+
+gatsby-plugin-global-context@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-global-context/-/gatsby-plugin-global-context-1.0.0.tgz#f3e9311418cda6335bb0553adf4455a75325537f"
+  integrity sha512-EHCgXwhzLgG1myVRmLOU2f1IZzckqBOo5ZF/CqYAHOrUXNZRF3ADag7u70LyyB6dYu9nZ+z14pKfQBR5nKZ84A==
+  dependencies:
+    invariant "^2.2.4"
+    is-object "^1.0.1"
+
 gatsby-plugin-netlify-cms@^4.2.5:
   version "4.3.3"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-cms/-/gatsby-plugin-netlify-cms-4.3.3.tgz#254b13e74d96af08d3621c30bcaf5c42f342729d"
@@ -7242,6 +7271,14 @@ gatsby-plugin-netlify-cms@^4.2.5:
     mini-css-extract-plugin "^0.8.2"
     netlify-identity-widget "^1.6.0"
     webpack "^4.43.0"
+
+gatsby-plugin-netlify-identity-widget@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-identity-widget/-/gatsby-plugin-netlify-identity-widget-1.1.1.tgz#06fd3f4f927c07ff6e6d6247047f12ae11995c62"
+  integrity sha512-6uO7UCBduIED7McFlQY3rdS9N5uBCsywVO6abx8RfpVCwEnAdApHPy106oEVmfgeshmVLtfpniWfw2ckif+SXQ==
+  dependencies:
+    babel-runtime "^6.26.0"
+    netlify-identity-widget "^1.4.12"
 
 gatsby-plugin-netlify@^2.2.4:
   version "2.3.3"
@@ -11354,7 +11391,7 @@ netlify-cms-widget-text@^2.3.0:
   dependencies:
     react-textarea-autosize "^7.1.0"
 
-netlify-identity-widget@^1.6.0:
+netlify-identity-widget@^1.4.12, netlify-identity-widget@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/netlify-identity-widget/-/netlify-identity-widget-1.6.0.tgz#35f89f802311ad45ff6fdb271167429192ec0aad"
   integrity sha512-TcZLl0bWCyudCOThskOGyAhBqy1zRmBLbLWpyOmnK/8Vf5+6UwPwTVl71muWwybRoSFlSyc5Qyu+c4D5sBLSDA==

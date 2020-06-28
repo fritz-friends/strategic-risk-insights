@@ -166,20 +166,20 @@ collections:
                   },
                 ],
             }
-            - {
-                label: Customers,
-                name: customers,
-                widget: object,
-                fields:
-                  [
-                    { label: Heading, name: heading, widget: string },
-                    {
-                      label: Logos,
-                      name: logos,
-                      widget: list,
-                      fields: [{ label: Logo, name: logo, widget: image }],
-                    },
-                  ],
+          - {
+              label: Customers,
+              name: customers,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  {
+                    label: Logos,
+                    name: logos,
+                    widget: list,
+                    fields: [{ label: Logo, name: logo, widget: image }],
+                  },
+                ],
             }
       - file: "src/pages/cases/index.md"
         label: "Cases Page"
