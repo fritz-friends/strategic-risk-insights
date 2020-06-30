@@ -11,6 +11,42 @@
 	border: none
 	cursor: pointer
 	
+.btn-nav
+	padding: 6px 12px
+	background: $sri-white
+	border-radius: 16px
+	color: $sri-black
+	font-weight: bold
+	&:hover
+		background: $sri-violet
+		color: $sri-white
+	&.current-page
+		background: $sri-plum
+		color: $sri-white
+		&:hover
+			background: $sri-violet
+	&.navbar-item-bottom
+		padding: 6px 12px
+		font-family: Roboto
+		font-style: normal
+		font-weight: bold
+		font-size: 16px
+		line-height: 20px
+		color: $sri-white
+		text-decoration: none
+		margin-right: 16px
+		display: inline-block
+		background-color: $sri-black
+		&:hover
+			text-decoration: underline
+			text-decoration-style: solid
+		&.current-page
+			text-decoration: underline
+			text-decoration-style: solid
+	
+.btn-nav--secondary
+	font-weight: normal
+	
 .btn-large
 	padding: 14px 32px;
 	border-radius: 24px;

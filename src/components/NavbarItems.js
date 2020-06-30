@@ -5,25 +5,25 @@ import { Link } from "gatsby";
 const NavbarItems = ({ className }) => {
 	return (
 		<>
-			<Link className={className} to="/services" activeClassName="current-page">
+			<Link className={className + " btn btn-nav"} to="/services" activeClassName="current-page">
 				Services
 			</Link>
-			<Link className={className} to="/cases" activeClassName="current-page">
+			<Link className={className + " btn btn-nav"} to="/cases" activeClassName="current-page">
 				Cases
 			</Link>
-			<Link className={className} to="/blog" activeClassName="current-page">
+			<Link className={className + " btn btn-nav"} to="/blog" activeClassName="current-page">
 				Blog
 			</Link>
-			<Link className={className} to="/podcast" activeClassName="current-page">
+			<Link className={className + " btn btn-nav"} to="/podcast" activeClassName="current-page">
 				Podcast
 			</Link>
-			<Link className={className} to="/book" activeClassName="current-page">
+			<Link className={className + " btn btn-nav"} to="/book" activeClassName="current-page">
 				Book
 			</Link>
-			<Link className={className} to="/about" activeClassName="current-page">
+			<Link className={className + " btn btn-nav"} to="/about" activeClassName="current-page">
 				About
 			</Link>
-			<Link className={className + " client-login"} to="/client-login" activeClassName="current-page">
+			<Link className={className + " btn btn-nav btn-nav--secondary secondary-nav-item"} to="/client-login" activeClassName="current-page">
 				Client Login
 			</Link>
 		</>

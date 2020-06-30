@@ -10,7 +10,10 @@ export const CasesTemplate = ({ content, contentComponent, logo, title }) => {
 	const PostContent = contentComponent || Content;
 	return (
 		<div>
-			<section className="subpage-masthead">
+			<section className="case-study-masthead">
+				<Link className="btn btn-nav btn-nav--secondary" to="/case-studies">
+					Back to Case Studies
+				</Link>
 				<h1>{title}</h1>
 			</section>
 			<section>
