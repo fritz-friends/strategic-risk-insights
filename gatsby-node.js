@@ -50,7 +50,7 @@ exports.createPages = ({ actions, graphql }) => {
 		});
 
 		// Create blog roll list pages
-		const postsPerPage = 5;
+		const postsPerPage = 2;
 		const numberOfPages = Math.ceil(blogPostCount / postsPerPage);
 		Array.from({ length: numberOfPages }).forEach((_, i) => {
 			createPage({
