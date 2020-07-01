@@ -17,26 +17,31 @@ export const BlogPostTemplate = ({
 	const PostContent = contentComponent || Content;
 
 	return (
-		<section>
+		<div className="blog-post-wrapper">
 			<section className="subpage-masthead">
+				<Link className="btn btn-nav btn-nav--secondary" to="/blog">
+					Back to Blog
+				</Link>
 				{helmet || ""}
 				<h1>{title}</h1>
 			</section>
-			<p>{description}</p>
-			<PostContent content={content} />
-			{tags && tags.length ? (
-				<div>
-					<h4>Tags</h4>
-					<ul>
-						{tags.map((tag) => (
-							<li key={tag + `tag`}>
-								<Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-							</li>
-						))}
-					</ul>
-				</div>
-			) : null}
-		</section>
+			<section className="blog-post content-copy">
+				<p>{description}</p>
+				<PostContent content={content} />
+				{tags && tags.length ? (
+					<div className="tags">
+						<h4>Tags</h4>
+						<ul className="tag-list">
+							{tags.map((tag) => (
+								<li key={tag + `tag`}>
+									<Link to={`/tags/${kebabCase(tag)}/`} className="btn btn-tag">{tag}</Link>
+								</li>
+							))}
+						</ul>
+					</div>
+				) : null}
+			</section>
+		</div>
 	);
 };
 
