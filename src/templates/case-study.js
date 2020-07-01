@@ -10,13 +10,13 @@ export const CasesTemplate = ({ content, contentComponent, logo, title }) => {
 	const PostContent = contentComponent || Content;
 	return (
 		<div>
-			<section className="case-study-masthead">
+			<section className="case-study-masthead" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1441974231531-c6227db76b6e)'}}>
 				<Link className="btn btn-nav btn-nav--secondary" to="/case-studies">
 					Back to Case Studies
 				</Link>
 				<h1>{title}</h1>
 			</section>
-			<section>
+			<section className="case-study-main-content">
 				<PreviewCompatibleImage imageInfo={logo} />
 				<PostContent content={content} />
 			</section>
