@@ -9,18 +9,31 @@ import Contact from "../components/Contact";
 export const BlogPostTemplate = ({ content, contentComponent, title }) => {
 	const PostContent = contentComponent || Content;
 	return (
-		<div>
+		<div className="blog-post-wrapper">
 			<section className="subpage-masthead">
 				<Link className="btn btn-nav btn-nav--secondary" to="/blog">
 					Back to Blog
 				</Link>
+				{helmet || ""}
 				<h1>{title}</h1>
 			</section>
-			<section className="post-container">
+			<section className="blog-post content-copy">
+				<p>{description}</p>
 				<PostContent content={content} />
-			</section>
-			<section className="contact-section">
-				<Contact />
+				{tags && tags.length ? (
+					<div className="tags">
+						<h4>Tags</h4>
+						<ul className="tag-list">
+							{tags.map((tag) => (
+								<li key={tag + `tag`}>
+									<Link to={`/tags/${kebabCase(tag)}/`} className="btn btn-tag">
+										{tag}
+									</Link>
+								</li>
+							))}
+						</ul>
+					</div>
+				) : null}
 			</section>
 		</div>
 	);
