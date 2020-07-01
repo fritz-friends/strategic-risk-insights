@@ -6,7 +6,6 @@ import Contact from "../../components/Contact";
 import PreviewCompatibleImage from "../../components/PreviewCompatibleImage";
 
 export const CasesTemplate = ({ studies }) => {
-	console.log("studies :>> ", studies);
 	return (
 		<div>
 			<section className="subpage-masthead">

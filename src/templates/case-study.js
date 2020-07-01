@@ -7,7 +7,7 @@ import Content, { HTMLContent } from "../components/Content";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 export const CasesTemplate = ({ content, contentComponent, logo, title }) => {
-	const PostContent = contentComponent || Content;
+	const CaseContent = contentComponent || Content;
 	return (
 		<div>
 			<section className="case-study-masthead">
@@ -18,7 +18,7 @@ export const CasesTemplate = ({ content, contentComponent, logo, title }) => {
 			</section>
 			<section>
 				<PreviewCompatibleImage imageInfo={logo} />
-				<PostContent content={content} />
+				<CaseContent content={content} />
 			</section>
 			<section className="contact-section">
 				<Contact />

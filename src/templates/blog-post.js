@@ -1,42 +1,28 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { kebabCase } from "lodash";
 import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
+import Contact from "../components/Contact";
 
-export const BlogPostTemplate = ({
-	content,
-	contentComponent,
-	description,
-	tags,
-	title,
-	helmet,
-}) => {
+export const BlogPostTemplate = ({ content, contentComponent, title }) => {
 	const PostContent = contentComponent || Content;
-
 	return (
-		<section>
+		<div>
 			<section className="subpage-masthead">
-				{helmet || ""}
+				<Link className="btn btn-nav btn-nav--secondary" to="/blog">
+					Back to Blog
+				</Link>
 				<h1>{title}</h1>
 			</section>
-			<p>{description}</p>
-			<PostContent content={content} />
-			{tags && tags.length ? (
-				<div>
-					<h4>Tags</h4>
-					<ul>
-						{tags.map((tag) => (
-							<li key={tag + `tag`}>
-								<Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-							</li>
-						))}
-					</ul>
-				</div>
-			) : null}
-		</section>
+			<section className="post-container">
+				<PostContent content={content} />
+			</section>
+			<section className="contact-section">
+				<Contact />
+			</section>
+		</div>
 	);
 };
 

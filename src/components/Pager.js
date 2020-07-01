@@ -17,16 +17,18 @@ export const Pages = ({ currentPage, numberOfPages }) => {
 		numberOfPages <= maxPageNumbers ? numberOfPages : maxPageNumbers;
 
 	const pages = Array.from({ length: length }, (_, i) => start + i);
-	console.log("pages :>> ", pages);
+
 	return pages.map((pageNumber) => (
-		<Link to={pageNumber > 0 ? `blog/${pageNumber + 1}` : "blog/"} className="btn btn-pagination btn-pagination--number">
+		<Link
+			to={pageNumber > 0 ? `blog/${pageNumber + 1}` : "blog/"}
+			className="btn btn-pagination btn-pagination--number"
+		>
 			{pageNumber + 1}
 		</Link>
 	));
 };
 const Pager = ({ pageContext }) => {
 	const { currentPage, numberOfPages } = pageContext;
-	console.log("currentPage :>> ", currentPage);
 	return (
 		<div className="pagination">
 			<Link
