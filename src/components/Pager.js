@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 
-export const Pages = ({ currentPage, numberOfPages }) => {
+export const Pages = ({ currentPage, numberOfPages, path }) => {
 	const maxPageNumbers = 3;
 	let start = 0;
 
@@ -20,19 +20,18 @@ export const Pages = ({ currentPage, numberOfPages }) => {
 
 	return pages.map((pageNumber) => (
 		<Link
-			to={pageNumber > 0 ? `blog/${pageNumber + 1}` : "blog/"}
+			to={pageNumber > 0 ? `${path}/${pageNumber + 1}` : `${path}/`}
 			className="btn btn-pagination btn-pagination--number"
 		>
 			{pageNumber + 1}
 		</Link>
 	));
 };
-const Pager = ({ pageContext }) => {
-	const { currentPage, numberOfPages } = pageContext;
+const Pager = ({ currentPage, numberOfPages, path }) => {
 	return (
 		<div className="pagination">
 			<Link
-				to={`blog/${
+				to={`${path}/${
 					currentPage > 1
 						? currentPage - 1 > 1
 							? currentPage - 1
@@ -44,10 +43,14 @@ const Pager = ({ pageContext }) => {
 				Previous
 			</Link>
 
-			<Pages currentPage={currentPage} numberOfPages={numberOfPages} />
+			<Pages
+				currentPage={currentPage}
+				numberOfPages={numberOfPages}
+				path={path}
+			/>
 
 			<Link
-				to={`blog/${
+				to={`${path}/${
 					currentPage < numberOfPages
 						? currentPage + 1 > 1
 							? currentPage + 1

@@ -2,26 +2,26 @@ import React from "react";
 
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import BlogRoll from "../components/BlogRoll";
+import CastRoll from "../components/CastRoll";
 import Contact from "../components/Contact";
 import Pager from "../components/Pager";
 
-export default class BlogListPage extends React.Component {
+export default class Podcast extends React.Component {
 	render() {
 		const { data, pageContext } = this.props;
 		return (
 			<Layout>
 				<section className="subpage-masthead">
-					<h1>Blog</h1>
+					<h1>Podcasts</h1>
 				</section>
 
 				<section className="blog-index-wrapper">
-					<BlogRoll data={data} />
+					<CastRoll data={data} />
 				</section>
 				<Pager
-					currentPage={pageContext.currentBlogPage}
-					numberOfPages={pageContext.numberOfBlogPages}
-					path="blog"
+					currentPage={pageContext.currentPodcastPage}
+					numberOfPages={pageContext.numberOfPodcastPages}
+					path="podcast"
 				/>
 				<section className="contact-section">
 					<Contact />
@@ -31,13 +31,13 @@ export default class BlogListPage extends React.Component {
 	}
 }
 
-export const blogListPageQuery = graphql`
-	query blogListPageQuery($blogSkip: Int!, $blogLimit: Int!) {
+export const podcastQuery = graphql`
+	query podcastQuery($castsSkip: Int, $castsLimit: Int) {
 		allMarkdownRemark(
 			sort: { order: DESC, fields: [frontmatter___date] }
-			filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
-			skip: $blogSkip
-			limit: $blogLimit
+			filter: { frontmatter: { templateKey: { eq: "podcast" } } }
+			skip: $castsSkip
+			limit: $castsLimit
 		) {
 			edges {
 				node {

@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
@@ -14,26 +13,13 @@ export const BlogPostTemplate = ({ content, contentComponent, title }) => {
 				<Link className="btn btn-nav btn-nav--secondary" to="/blog">
 					Back to Blog
 				</Link>
-				{helmet || ""}
 				<h1>{title}</h1>
 			</section>
 			<section className="blog-post content-copy">
-				<p>{description}</p>
 				<PostContent content={content} />
-				{tags && tags.length ? (
-					<div className="tags">
-						<h4>Tags</h4>
-						<ul className="tag-list">
-							{tags.map((tag) => (
-								<li key={tag + `tag`}>
-									<Link to={`/tags/${kebabCase(tag)}/`} className="btn btn-tag">
-										{tag}
-									</Link>
-								</li>
-							))}
-						</ul>
-					</div>
-				) : null}
+			</section>
+			<section className="contact-section">
+				<Contact />
 			</section>
 		</div>
 	);
@@ -56,15 +42,6 @@ const BlogPost = ({ data }) => {
 				content={post.html}
 				contentComponent={HTMLContent}
 				description={post.frontmatter.description}
-				helmet={
-					<Helmet titleTemplate="%s | Blog">
-						<title>{`${post.frontmatter.title}`}</title>
-						<meta
-							name="description"
-							content={`${post.frontmatter.description}`}
-						/>
-					</Helmet>
-				}
 				tags={post.frontmatter.tags}
 				title={post.frontmatter.title}
 			/>
