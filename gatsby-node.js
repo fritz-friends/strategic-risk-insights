@@ -75,7 +75,7 @@ exports.createPages = ({ actions, graphql }) => {
 		Array.from({ length: numberOfPodcastPages }).forEach((_, i) => {
 			createPage({
 				path: i === 0 ? `/podcast` : `/podcast/${i + 1}`,
-				component: path.resolve("./src/templates/podcast.js"),
+				component: path.resolve("./src/templates/podcast-list.js"),
 				context: {
 					castsLimit: castsPerPage,
 					castsSkip: i * castsPerPage,

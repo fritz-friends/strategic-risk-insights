@@ -1,64 +1,86 @@
 import React from "react";
-
-import { graphql } from "gatsby";
+import PropTypes from "prop-types";
+import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
-import CastRoll from "../components/CastRoll";
+import Content, { HTMLContent } from "../components/Content";
 import Contact from "../components/Contact";
-import Pager from "../components/Pager";
 
-export default class Podcast extends React.Component {
-	render() {
-		const { data, pageContext } = this.props;
-		return (
-			<Layout>
-				<section className="subpage-masthead">
-					<h1>Podcasts</h1>
-				</section>
+export const PodcastTemplate = ({
+	content,
+	contentComponent,
+	title,
+	audioFile,
+}) => {
+	const PostContent = contentComponent || Content;
+	console.log("audioFile :>> ", audioFile);
+	return (
+		<div className="blog-post-wrapper">
+			<section className="subpage-masthead">
+				<Link className="btn btn-nav btn-nav--secondary" to="/podcast">
+					Back to Podcasts
+				</Link>
+				<h1>{title}</h1>
+			</section>
+			<audio controls src={audioFile} className="audio-player">
+				Your browser does not support the
+				<code>audio</code> element.
+			</audio>
+			<section className="blog-post content-copy">
+				<PostContent content={content} />
+			</section>
+			<section className="contact-section">
+				<Contact />
+			</section>
+		</div>
+	);
+};
 
-				<section className="blog-index-wrapper">
-					<CastRoll data={data} />
-				</section>
-				<Pager
-					currentPage={pageContext.currentPodcastPage}
-					numberOfPages={pageContext.numberOfPodcastPages}
-					path="podcast"
-				/>
-				<section className="contact-section">
-					<Contact />
-				</section>
-			</Layout>
-		);
-	}
-}
+PodcastTemplate.propTypes = {
+	content: PropTypes.node.isRequired,
+	contentComponent: PropTypes.func,
+	description: PropTypes.string,
+	title: PropTypes.string,
+	helmet: PropTypes.object,
+	audioFile: PropTypes.string,
+};
 
-export const podcastQuery = graphql`
-	query podcastQuery($castsSkip: Int, $castsLimit: Int) {
-		allMarkdownRemark(
-			sort: { order: DESC, fields: [frontmatter___date] }
-			filter: { frontmatter: { templateKey: { eq: "podcast" } } }
-			skip: $castsSkip
-			limit: $castsLimit
-		) {
-			edges {
-				node {
-					excerpt(pruneLength: 400)
-					id
-					fields {
-						slug
-					}
-					frontmatter {
-						title
-						templateKey
-						date(formatString: "MMMM DD, YYYY")
-						featuredpost
-						featuredimage {
-							childImageSharp {
-								fluid(maxWidth: 120, quality: 100) {
-									...GatsbyImageSharpFluid
-								}
-							}
-						}
-					}
+const BlogPost = ({ data }) => {
+	console.log("data :>> ", data);
+	const { markdownRemark: post } = data;
+
+	return (
+		<Layout>
+			<PodcastTemplate
+				content={post.html}
+				contentComponent={HTMLContent}
+				description={post.frontmatter.description}
+				tags={post.frontmatter.tags}
+				title={post.frontmatter.title}
+				audioFile={post.frontmatter.audioFile.publicURL}
+			/>
+		</Layout>
+	);
+};
+
+BlogPost.propTypes = {
+	data: PropTypes.shape({
+		markdownRemark: PropTypes.object,
+	}),
+};
+
+export default BlogPost;
+
+export const pageQuery = graphql`
+	query PodcastByID($id: String!) {
+		markdownRemark(id: { eq: $id }) {
+			id
+			html
+			frontmatter {
+				date(formatString: "MMMM DD, YYYY")
+				title
+				description
+				audioFile {
+					publicURL
 				}
 			}
 		}

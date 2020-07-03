@@ -1,57 +1,59 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import React from "react";
+import PropTypes from "prop-types";
+import { graphql } from "gatsby";
+import Contact from "../components/Contact";
+import Layout from "../components/Layout";
+import Content, { HTMLContent } from "../components/Content";
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content
+	const PageContent = contentComponent || Content;
 
-  return (
-    <div>
-      <section className="subpage-masthead">
-        <h1>
-          About Us
-        </h1>
-      </section>
-      <PageContent className="content" content={content} />
-    </div>
-  )
-}
+	return (
+		<div>
+			<section className="subpage-masthead">
+				<h1>About Us</h1>
+			</section>
+			<PageContent className="content" content={content} />
+			<section className="contact-section">
+				<Contact />
+			</section>
+		</div>
+	);
+};
 
 AboutPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
-}
+	title: PropTypes.string.isRequired,
+	content: PropTypes.string,
+	contentComponent: PropTypes.func,
+};
 
 const AboutPage = ({ data }) => {
-  const { markdownRemark: post } = data
+	const { markdownRemark: post } = data;
 
-  return (
-    <Layout>
-      <AboutPageTemplate
-        contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
-      />
-    </Layout>
-  )
-}
+	return (
+		<Layout>
+			<AboutPageTemplate
+				contentComponent={HTMLContent}
+				title={post.frontmatter.title}
+				content={post.html}
+			/>
+		</Layout>
+	);
+};
 
 AboutPage.propTypes = {
-  data: PropTypes.object.isRequired,
-}
+	data: PropTypes.object.isRequired,
+};
 
-export default AboutPage
+export default AboutPage;
 
 export const aboutPageQuery = graphql`
-  query AboutPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
-      frontmatter {
-        title
-      }
-    }
-  }
-`
+	query AboutPage($id: String!) {
+		markdownRemark(id: { eq: $id }) {
+			html
+			frontmatter {
+				title
+			}
+		}
+	}
+`;

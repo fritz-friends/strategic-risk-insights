@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import Contact from "../components/Contact";
 
 export const BookTemplate = ({ markup }) => {
 	const {
@@ -39,6 +40,9 @@ export const BookTemplate = ({ markup }) => {
 
 			{/* Description */}
 			<section>{description}</section>
+			<section className="contact-section">
+				<Contact chapter />
+			</section>
 		</div>
 	);
 };

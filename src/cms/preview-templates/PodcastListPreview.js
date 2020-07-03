@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import PodcastList from "../../templates/podcast";
+import PodcastList from "../../templates/podcast-list";
 
 const PodcastListPreview = ({ entry, widgetFor }) => {
 	const tags = entry.getIn(["data", "tags"]);

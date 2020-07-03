@@ -13,6 +13,7 @@
     "gatsby-plugin-netlify": "^2.2.4",
     "gatsby-plugin-netlify-cms": "^4.2.5",
     "gatsby-plugin-netlify-identity-widget": "^1.1.1",
+    "gatsby-plugin-podcast-feed-mdx": "^0.1.0-alpha.7",
     "gatsby-plugin-purgecss": "^5.0.0",
     "gatsby-plugin-react-helmet": "^3.2.5",
     "gatsby-plugin-sass": "^2.2.4",
