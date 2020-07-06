@@ -9,6 +9,11 @@ export default class CastRoll extends React.Component {
 		return (
 			<>
 				<div className="blogroll-articles">
+					<div className="util--centered-wrapper podcast-subscription">
+						<Link className="btn btn-large" to="/podcast">
+							Subscribe
+						</Link>
+					</div>
 					{posts &&
 						posts.map(({ node: post }) => (
 							<div className="blogroll-article column" key={post.id}>

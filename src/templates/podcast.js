@@ -21,10 +21,12 @@ export const PodcastTemplate = ({
 				</Link>
 				<h1>{title}</h1>
 			</section>
-			<audio controls src={audioFile} className="audio-player">
-				Your browser does not support the
-				<code>audio</code> element.
-			</audio>
+			<section className="audio-wrapper">
+				<audio controls src={audioFile} className="audio-player">
+					Your browser does not support the
+					<code>audio</code> element.
+				</audio>
+			</section>
 			<section className="blog-post content-copy">
 				<PostContent content={content} />
 			</section>
