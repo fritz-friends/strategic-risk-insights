@@ -1,18 +1,31 @@
 .book-frontmatter
+	position: relative
 	padding: 72px 0 40px
+	&:before
+		content: ""
+		position: absolute
+		left: 0
+		top: 96px
+		z-index: -1
+		width: 100%
+		height: calc(100% - 112px)
+		background-color: $sri-black
+		background-image: url("../../static/img/speed-lines.svg")
+		background-repeat: repeat-x
+		background-position: left 24px
+	
+.book-reviews-wrapper
+	display: flex
 	
 .book-reviews
-	background-color: $sri-black
-	background-image: url("../../static/img/speed-lines.svg")
-	background-repeat: repeat-x
-	background-position: left 24px
-	padding: 56px 80px 40px
-	color: $sri-white
+	padding-top: 72px
+	// padding: 56px 80px 40px
 
 .book-review
 	padding-bottom: 24px
 	p
 		margin: 0 0 8px
+		color: $sri-white
 		&.reviewer
 			opacity: .6
 			margin-bottom: 0

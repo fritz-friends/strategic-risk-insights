@@ -22,17 +22,19 @@ export const BookTemplate = ({ markup }) => {
 			</section>
 
 			<section className="book-frontmatter">
-				<div className="book-cover">
-					<PreviewCompatibleImage imageInfo={markup.frontmatter} />
-				</div>
-				<div className="book-reviews">
-					<div className="book-review">
-						<p>{firstReview}</p>
-						<p className="reviewer">{firstReviewer}</p>
+				<div class="book-reviews-wrapper">
+					<div className="book-cover">
+						<PreviewCompatibleImage imageInfo={markup.frontmatter} />
 					</div>
-					<div className="book-review">
-						<p>{secondReview}</p>
-						<p className="reviewer">{secondReviewer}</p>
+					<div className="book-reviews">
+						<div className="book-review">
+							<p>{firstReview}</p>
+							<p className="reviewer">{firstReviewer}</p>
+						</div>
+						<div className="book-review">
+							<p>{secondReview}</p>
+							<p className="reviewer">{secondReviewer}</p>
+						</div>
 					</div>
 				</div>
 			</section>
