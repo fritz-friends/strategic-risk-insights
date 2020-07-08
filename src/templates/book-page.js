@@ -40,10 +40,14 @@ export const BookTemplate = ({ markup }) => {
 			</section>
 
 			{/* Buy Now */}
-			<section></section>
+			<section class="buy-now-section">
+				<h2>Buy Now</h2>
+			</section>
 
 			{/* Description */}
-			<section>{description}</section>
+			<section className="book-content">
+				{description}
+			</section>
 			<section className="contact-section">
 				<Contact chapter />
 			</section>

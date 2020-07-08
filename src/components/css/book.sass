@@ -1,31 +1,74 @@
 .book-frontmatter
 	position: relative
-	padding: 72px 0 40px
-	&:before
-		content: ""
-		position: absolute
-		left: 0
-		top: 96px
-		z-index: -1
-		width: 100%
-		height: calc(100% - 112px)
-		background-color: $sri-black
-		background-image: url("../../static/img/speed-lines.svg")
-		background-repeat: repeat-x
-		background-position: left 24px
+	padding: 0 0 0
+	@media screen and (min-width:48em)
+		padding: 72px 0 0
+		&:before
+			content: ""
+			position: absolute
+			left: 0
+			top: 96px
+			z-index: -1
+			width: 100%
+			height: calc(100% - 128px)
+			background-color: $sri-black
+			background-image: url("../../static/img/speed-lines.svg")
+			background-repeat: repeat-x
+			background-position: left 24px
 	
 .book-reviews-wrapper
 	display: flex
+	flex-direction: column
+	align-items: center
+	@media screen and (min-width:48em)
+		display: grid
+		align-items: inherit
+		grid-template-columns: 22.1223022% 10.0719424% 1fr;
+		grid-template-areas: "cover . reviews"
+		padding: 0 80px 0 88px
 	
+.book-cover
+	width: calc(100% - 80px)
+	max-width: 400px
+	transform: translateY(56px)
+	@media screen and (min-width:48em)
+		width: inherit
+		max-width: inherit
+		grid-area: cover
+		transform: inherit
+
 .book-reviews
-	padding-top: 72px
+	padding: 72px 24px 40px
+	background-color: $sri-black
+	background-image: url("../../static/img/speed-lines.svg")
+	background-repeat: repeat-x
+	background-position: left 24px
+	@media screen and (min-width:48em)
+		background-color: transparent
+		background-image: none
+		grid-area: reviews
+		padding: 80px 0 64px
 	// padding: 56px 80px 40px
 
 .book-review
 	padding-bottom: 24px
+	&:last-of-type
+		padding-bottom: 0
 	p
 		margin: 0 0 8px
 		color: $sri-white
 		&.reviewer
 			opacity: .6
 			margin-bottom: 0
+			
+.buy-now-section
+	margin: 0 auto
+	padding: 0 0 40px
+	width: calc(100% - 48px)
+	max-width: 800px
+
+.book-content
+	margin: 0 auto
+	padding: 0 0 40px
+	width: calc(100% - 48px)
+	max-width: 800px
