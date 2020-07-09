@@ -1,193 +1,137 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import React from "react";
+import PropTypes from "prop-types";
+import { Link, graphql } from "gatsby";
 
-import Layout from '../components/Layout'
-import Features from '../components/Features'
-import BlogRoll from '../components/BlogRoll'
+import BlogRollForIndex from "../components/BlogRollForIndex";
+import Contact from "../components/Contact";
+import Features from "../components/Features";
+import Layout from "../components/Layout";
+import TrackRecordSlider from "../components/TrackRecordSlider";
 
 export const IndexPageTemplate = ({
-  image,
-  title,
-  heading,
-  subheading,
-  mainpitch,
-  description,
-  intro,
+	title,
+	videoSourceURL,
+	intro,
+	trackrecord,
 }) => (
-  <div>
-    <div
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`,
-      }}
-    >
-      <div
-        style={{
-          display: 'flex',
-          height: '150px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
-        }}
-      >
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {title}
-        </h1>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {subheading}
-        </h3>
-      </div>
-    </div>
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="content">
-                <div className="content">
-                  <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
-                  </div>
-                  <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
-                  </div>
-                </div>
-                <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                  </div>
-                </div>
-                <Features gridItems={intro.blurbs} />
-                <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
-                      See all products
-                    </Link>
-                  </div>
-                </div>
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
-                  </h3>
-                  <BlogRoll />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Read more
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-)
+	<div>
+		{/* Introduction */}
+		<section className="intro">
+			<h1>{title}</h1>
+			<video className="video" controls>
+				<source src={videoSourceURL.publicURL} type="video/mp4" />
+			</video>
+		</section>
+
+		{/* services */}
+		<section className="service-blurbs">
+			<img
+				src="/img/3rd-paradigm-illustration.svg"
+				alt="The 3rd Paradigm"
+				className="paradigm-illustration"
+			/>
+			<Features gridItems={intro.blurbs} />
+			<Link to="/services" className="btn btn-reversed btn-large">
+				See Our Services
+			</Link>
+		</section>
+
+		{/* Latest Content */}
+		<section className="blogroll--home">
+			<h2 className="heading-1">Latest stories</h2>
+			<BlogRollForIndex />
+		</section>
+
+		<section className="contact-section">
+			<Contact />
+		</section>
+
+		{/* Track Record */}
+		<section className="trackrecord--home">
+			<h2 className="heading-1">{trackrecord.heading}</h2>
+			<TrackRecordSlider testimonials={trackrecord.testimonials} />
+			<div className="util--centered-wrapper">
+				<Link to="/cases" className="btn btn-large">
+					Read Our Case Studies
+				</Link>
+			</div>
+		</section>
+	</div>
+);
 
 IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
-}
+	videoSourceURL: PropTypes.string,
+	title: PropTypes.string,
+	intro: PropTypes.shape({
+		blurbs: PropTypes.array,
+	}),
+	trackrecord: PropTypes.array,
+};
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
-
-  return (
-    <Layout>
-      <IndexPageTemplate
-        image={frontmatter.image}
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
-      />
-    </Layout>
-  )
-}
+	const { frontmatter } = data.markdownRemark;
+	return (
+		<Layout>
+			<IndexPageTemplate
+				videoSourceURL={frontmatter.videoSourceURL}
+				title={frontmatter.title}
+				intro={frontmatter.intro}
+				trackrecord={frontmatter.trackrecord}
+			/>
+		</Layout>
+	);
+};
 
 IndexPage.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
-    }),
-  }),
-}
+	data: PropTypes.shape({
+		markdownRemark: PropTypes.shape({
+			frontmatter: PropTypes.object,
+		}),
+	}),
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const pageQuery = graphql`
-  query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
-      frontmatter {
-        title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        heading
-        subheading
-        mainpitch {
-          title
-          description
-        }
-        description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
-          description
-        }
-      }
-    }
-  }
-`
+	query IndexPageTemplate {
+		markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+			frontmatter {
+				title
+				videoSourceURL {
+					publicURL
+				}
+				videoTitle
+				heading
+				intro {
+					blurbs {
+						image {
+							childImageSharp {
+								fluid(maxWidth: 240, quality: 64) {
+									...GatsbyImageSharpFluid
+								}
+							}
+							id
+						}
+						title
+						text
+					}
+				}
+				trackrecord {
+					heading
+					testimonials {
+						image {
+							childImageSharp {
+								fluid(maxWidth: 240, quality: 64) {
+									...GatsbyImageSharpFluid
+								}
+							}
+							id
+						}
+						testimonial
+						testifier
+					}
+				}
+			}
+		}
+	}
+`;

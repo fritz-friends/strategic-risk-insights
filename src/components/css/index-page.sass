@@ -1,0 +1,76 @@
+.intro
+    position: relative
+    padding: 32px 24px 120px
+    background-image: url("../../static/img/homepage-intro-background-pattern.svg")
+    background-position: left -150%
+    background-repeat: repeat-x
+    display: flex
+    flex-direction: column
+    align-items: center
+    @media screen and (min-width:22em)
+        padding: 32px 24px 160px
+    @media screen and (min-width:28em)
+        background-position: left bottom
+        padding: 32px 24px 200px
+    @media screen and (min-width:32em)
+        padding: 32px 24px 240px
+    @media screen and (min-width:38em)
+        padding: 32px 24px 300px
+    @media screen and (min-width:45em)
+        padding: 32px 24px 360px
+    @media screen and (min-width:56em)
+        padding: 72px 24px 408px
+    h1
+        text-align: center
+        margin: 0
+        width: 100%
+        max-width: 600px
+        background-color: transparentize($sri-white, .2)
+
+    .video
+        position: absolute
+        left: 50%
+        top: 120px
+        transform: translateX(-50%)
+        width: calc(100% - 96px)
+        max-width: 814px
+        height: auto
+        transform-origin: 50% 0
+        @media screen and (min-width:45em)
+            top: 152px
+        @media screen and (min-width:56em)
+            top: 256px
+
+.service-blurbs
+    padding: 0 0 48px
+    background-color: $sri-black
+    color: $sri-white
+    display: flex
+    flex-direction: column
+    align-items: center
+    h2
+        margin: 0 0 16px
+    p
+        margin: 0
+
+.paradigm-illustration
+    width: 100%
+    max-width: 1280px
+    height: auto
+
+.columns
+    display: flex
+    justify-content: center
+    padding-bottom: 48px
+    margin-top: -40px
+    width: 100%
+    @media screen and (min-width:38em)
+        margin-top: -80px
+    > div
+        width: 33.33%
+
+.serviceBlurb
+    text-align: center
+    padding: 0 24px
+    h2
+        margin-bottom: 16px

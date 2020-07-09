@@ -1,0 +1,82 @@
+.navbar
+    padding: 12px 24px 28px
+    position: relative
+    background-image: url("../../static/img/pipe-bend.svg")
+    background-position: calc(100% - 24px) 100%
+    background-repeat: no-repeat
+    background-size: 80px
+    @media screen and (min-width:56em)
+        background-position: calc(100% - 149px) 100%
+    &:before
+        content: ""
+        width: 18px
+        height: calc(100% - 80px)
+        position: absolute
+        right: 24px
+        top: 0
+        z-index: -1
+        background: url("../../static/img/pipe-vertical.svg") repeat-y
+        @media screen and (min-width:56em)
+            right: 149px
+    &:after
+        content: ""
+        width: calc(100% - 104px)
+        height: 18px
+        position: absolute
+        left: 0
+        top: calc(100% - 18px)
+        z-index: -1
+        background: url("../../static/img/pipe-horizontal.svg") repeat-x
+        @media screen and (min-width:56em)
+            width: calc(100% - 229px)
+
+.container
+    @media screen and (min-width:56em)
+        display: flex
+        align-items: flex-end
+
+.navbar-brand
+    margin-right: 16px
+
+.navbar-menu
+    margin-top: 16px
+    padding-right: 72px
+    @media screen and (min-width:56em)
+        margin-top: 0
+        padding-right: 0
+
+.navbar-item
+    margin-right: 16px
+    &.secondary-nav-item
+        right: 48px
+        top: 16px
+        margin-right: 0
+        @media screen and (min-width:56em)
+            position: absolute
+            right: 0
+            top: inherit
+            margin-right: 24px
+
+.navbar-item-bottom
+    padding: 6px 12px
+    font-family: Roboto
+    font-style: normal
+    font-weight: bold
+    font-size: 16px
+    line-height: 20px
+    color: $sri-white
+    text-decoration: none
+    margin-right: 16px
+    display: inline-block
+    &:hover
+        text-decoration: underline
+        text-decoration-style: solid
+    &.current-page
+        text-decoration: underline
+        text-decoration-style: solid
+
+.navbar-logo
+    width: 147px
+    max-height: none
+
+.navbar-start

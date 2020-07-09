@@ -1,0 +1,14 @@
+{
+  "actions" : {
+    "build" : {
+      "enabled" : true,
+      "script" : "yarn"
+    },
+    "run" : {
+      "enabled" : true,
+      "script" : "PORT=8001 yarn start"
+    }
+  },
+  "identifier" : "3AEFC3BF-3289-4D06-AEE8-50D1853E86B1",
+  "openLogOnRun" : "success"
+}
