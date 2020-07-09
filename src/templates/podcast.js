@@ -12,7 +12,6 @@ export const PodcastTemplate = ({
 	audioFile,
 }) => {
 	const PostContent = contentComponent || Content;
-	console.log("audioFile :>> ", audioFile);
 	return (
 		<div className="blog-post-wrapper">
 			<section className="subpage-masthead">

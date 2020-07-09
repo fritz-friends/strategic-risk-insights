@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: We put the strategy in strategic risk management
-videoSourceURL: https://assets.noahread.net/blog/shanghai_dancing.mp4
+videoSourceURL: "/img/SRI-Intro-Rough-4.mp4"
 videoTitle: "Introduction"
 heading: We put the strategy in strategic risk management.
 description: >-

@@ -19,7 +19,7 @@ export const IndexPageTemplate = ({
 		<section className="intro">
 			<h1>{title}</h1>
 			<video className="video" controls>
-				<source src={videoSourceURL} type="video/mp4" />
+				<source src={videoSourceURL.publicURL} type="video/mp4" />
 			</video>
 		</section>
 
@@ -51,7 +51,7 @@ export const IndexPageTemplate = ({
 			<h2 className="heading-1">{trackrecord.heading}</h2>
 			<TrackRecordSlider testimonials={trackrecord.testimonials} />
 			<div className="util--centered-wrapper">
-				<Link to="/case-studies" className="btn btn-large">
+				<Link to="/cases" className="btn btn-large">
 					Read Our Case Studies
 				</Link>
 			</div>
@@ -97,7 +97,9 @@ export const pageQuery = graphql`
 		markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
 			frontmatter {
 				title
-				videoSourceURL
+				videoSourceURL {
+					publicURL
+				}
 				videoTitle
 				heading
 				intro {
