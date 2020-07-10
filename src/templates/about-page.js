@@ -13,7 +13,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 			<section className="subpage-masthead">
 				<h1>About Us</h1>
 			</section>
-			<PageContent className="content" content={content} />
+			<PageContent className="about-content" content={content} />
 			<section className="contact-section">
 				<Contact />
 			</section>
