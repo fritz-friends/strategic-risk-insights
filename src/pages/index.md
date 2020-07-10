@@ -1,9 +1,9 @@
 ---
 templateKey: index-page
-title: We put the strategy in strategic risk management
+title: "The Third Paradigm of Risk Management: linking Strategy and Risk to Create Value."
 videoSourceURL: "/img/SRI-Intro-Rough-4.mp4"
 videoTitle: "Introduction"
-heading: We put the strategy in strategic risk management.
+heading: "The Third Paradigm of Risk Management: linking Strategy and Risk to Create Value."
 description: >-
   We put the strategy in strategic risk management. We put the strategy in strategic risk management. We put the strategy in strategic risk management. We put the strategy in strategic risk management. We put the strategy in strategic risk management. We put the strategy in strategic risk management. We put the strategy in strategic risk management. We put the strategy in strategic risk management. We put the strategy in strategic risk management.
 intro:
