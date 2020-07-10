@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Parser from "html-react-parser";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Contact from "../components/Contact";
@@ -23,7 +24,7 @@ export const ServicePageTemplate = ({
 					return (
 						<div className="service" key={i}>
 							<h2>{service.service}</h2>
-							<p>{service.text}</p>
+							<p>{Parser(service.text)}</p>
 						</div>
 					);
 				})}
