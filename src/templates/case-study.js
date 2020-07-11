@@ -17,7 +17,7 @@ export const CasesTemplate = ({ content, contentComponent, logo, title }) => {
 						"url(https://images.unsplash.com/photo-1441974231531-c6227db76b6e)",
 				}}
 			>
-				<Link className="btn btn-nav btn-nav--secondary" to="/case-studies">
+				<Link className="btn btn-nav btn-nav--secondary" to="/cases">
 					Back to Case Studies
 				</Link>
 				<h1>{title}</h1>
