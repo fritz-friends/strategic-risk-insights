@@ -41,12 +41,7 @@ export const ServicePageTemplate = ({
 		<section className="highlightedservice-container">
 			<div className="highlightedservice">
 				<h2 className="heading-1">{highlightedservice.heading}</h2>
-				<p>{highlightedservice.description}</p>
-				<ul>
-					{highlightedservice.bullets.map((bullet, i) => {
-						return bullet ? <li key={i}>{bullet.bullet}</li> : null;
-					})}
-				</ul>
+				<p>{Parser(highlightedservice.description)}</p>
 			</div>
 		</section>
 
@@ -131,9 +126,6 @@ export const servicePageQuery = graphql`
 				highlightedservice {
 					heading
 					description
-					bullets {
-						bullet
-					}
 				}
 				customers {
 					heading

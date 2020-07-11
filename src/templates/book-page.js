@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Parser from "html-react-parser";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
@@ -12,6 +13,8 @@ export const BookTemplate = ({ markup }) => {
 		firstReviewer,
 		secondReview,
 		secondReviewer,
+		thirdReview,
+		thirdReviewer,
 		description,
 	} = markup.frontmatter;
 
@@ -28,12 +31,16 @@ export const BookTemplate = ({ markup }) => {
 					</div>
 					<div className="book-reviews">
 						<div className="book-review">
-							<p>{firstReview}</p>
-							<p className="reviewer">{firstReviewer}</p>
+							<p>{Parser(firstReview)}</p>
+							<p className="reviewer">{Parser(firstReviewer)}</p>
 						</div>
 						<div className="book-review">
-							<p>{secondReview}</p>
-							<p className="reviewer">{secondReviewer}</p>
+							<p>{Parser(secondReview)}</p>
+							<p className="reviewer">{Parser(secondReviewer)}</p>
+						</div>
+						<div className="book-review">
+							<p>{Parser(thirdReview)}</p>
+							<p className="reviewer">{Parser(thirdReviewer)}</p>
 						</div>
 					</div>
 				</div>
@@ -45,9 +52,7 @@ export const BookTemplate = ({ markup }) => {
 			</section>
 
 			{/* Description */}
-			<section className="book-content">
-				{description}
-			</section>
+			<section className="book-content">{Parser(description)}</section>
 			<section className="contact-section">
 				<Contact chapter />
 			</section>
@@ -86,6 +91,8 @@ export const BookPageQuery = graphql`
 				firstReviewer
 				secondReview
 				secondReviewer
+				thirdReview
+				thirdReviewer
 				image {
 					childImageSharp {
 						fluid(maxWidth: 240, quality: 64) {
