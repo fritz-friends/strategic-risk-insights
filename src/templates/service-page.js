@@ -20,14 +20,12 @@ export const ServicePageTemplate = ({
 		</section>
 		<div className="services-container">
 			<div className="services">
-				{intro.services.map((service, i) => {
-					return (
-						<div className="service" key={i}>
-							<h2>{service.service}</h2>
-							<p>{Parser(service.text)}</p>
-						</div>
-					);
-				})}
+				{Parser(intro.firstText)}
+				<PreviewCompatibleImage
+					imageInfo={intro.image}
+					className="services-picture"
+				/>
+				{Parser(intro.secondText)}
 			</div>
 			<div className="services-picture">
 				<PreviewCompatibleImage
@@ -41,7 +39,7 @@ export const ServicePageTemplate = ({
 		<section className="highlightedservice-container">
 			<div className="highlightedservice">
 				<h2 className="heading-1">{highlightedservice.heading}</h2>
-				<p>{Parser(highlightedservice.description)}</p>
+				{Parser(highlightedservice.description)}
 			</div>
 		</section>
 
@@ -66,9 +64,7 @@ export const ServicePageTemplate = ({
 ServicePageTemplate.propTypes = {
 	image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 	title: PropTypes.string,
-	intro: PropTypes.shape({
-		blurbs: PropTypes.array,
-	}),
+	intro: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 	highlightedservice: PropTypes.shape({
 		heading: PropTypes.string,
 		description: PropTypes.string,
@@ -118,10 +114,15 @@ export const servicePageQuery = graphql`
 					}
 				}
 				intro {
-					services {
-						service
-						text
+					firstText
+					image {
+						childImageSharp {
+							fluid(maxWidth: 2048, quality: 100) {
+								...GatsbyImageSharpFluid
+							}
+						}
 					}
+					secondText
 				}
 				highlightedservice {
 					heading

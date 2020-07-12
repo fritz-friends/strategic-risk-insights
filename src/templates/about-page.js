@@ -1,19 +1,30 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Parser from "html-react-parser";
 import { graphql } from "gatsby";
 import Contact from "../components/Contact";
 import Layout from "../components/Layout";
-import Content, { HTMLContent } from "../components/Content";
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
-	const PageContent = contentComponent || Content;
-
+export const AboutPageTemplate = ({ description, principals, title }) => {
 	return (
 		<div>
 			<section className="subpage-masthead">
-				<h1>About Us</h1>
+				<h1>{title}</h1>
 			</section>
-			<PageContent className="about-content" content={content} />
+			<section>{Parser(description)}</section>
+			<section>
+				{principals.map((principal) => (
+					<div>
+						<PreviewCompatibleImage
+							imageInfo={principal.photo}
+							className="about-picture"
+						/>
+						{principal.principal}
+						{Parser(principal.text)}
+					</div>
+				))}
+			</section>
 			<section className="contact-section">
 				<Contact />
 			</section>
@@ -28,14 +39,15 @@ AboutPageTemplate.propTypes = {
 };
 
 const AboutPage = ({ data }) => {
+	console.log("data :>> ", data);
 	const { markdownRemark: post } = data;
 
 	return (
 		<Layout>
 			<AboutPageTemplate
-				contentComponent={HTMLContent}
+				description={post.frontmatter.description}
+				principals={post.frontmatter.principals}
 				title={post.frontmatter.title}
-				content={post.html}
 			/>
 		</Layout>
 	);
@@ -53,6 +65,18 @@ export const aboutPageQuery = graphql`
 			html
 			frontmatter {
 				title
+				description
+				principals {
+					principal
+					photo {
+						childImageSharp {
+							fluid(maxWidth: 2048, quality: 100) {
+								...GatsbyImageSharpFluid
+							}
+						}
+					}
+					text
+				}
 			}
 		}
 	}
