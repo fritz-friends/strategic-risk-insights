@@ -22,6 +22,7 @@ export const Pages = ({ currentPage, numberOfPages, path }) => {
 		<Link
 			to={pageNumber > 0 ? `${path}/${pageNumber + 1}` : `${path}/`}
 			className="btn btn-pagination btn-pagination--number"
+			key={pageNumber}
 		>
 			{pageNumber + 1}
 		</Link>

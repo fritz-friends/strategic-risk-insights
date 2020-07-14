@@ -3,7 +3,7 @@ templateKey: case-study
 title: Questar
 order: 5
 featuredpost: true
-logo: /img/media-placeholder.png
+logo: /img/questar.jpg
 description: Enterprise Risk Management
 ---
 

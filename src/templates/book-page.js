@@ -25,7 +25,7 @@ export const BookTemplate = ({ markup }) => {
 			</section>
 
 			<section className="book-frontmatter">
-				<div class="book-reviews-wrapper">
+				<div className="book-reviews-wrapper">
 					<div className="book-cover">
 						<PreviewCompatibleImage imageInfo={markup.frontmatter} />
 					</div>
@@ -47,7 +47,7 @@ export const BookTemplate = ({ markup }) => {
 			</section>
 
 			{/* Buy Now */}
-			<section class="buy-now-section">
+			<section className="buy-now-section">
 				<h2>Buy Now</h2>
 			</section>
 
@@ -61,7 +61,7 @@ export const BookTemplate = ({ markup }) => {
 };
 
 BookTemplate.propTypes = {
-	title: PropTypes.string.isRequired,
+	title: PropTypes.string,
 	content: PropTypes.string,
 	contentComponent: PropTypes.func,
 };

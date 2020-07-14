@@ -3,7 +3,7 @@ templateKey: case-study
 title: Newman's Own
 order: 1
 featuredpost: true
-logo: /img/media-placeholder.png
+logo: /img/Newmans_Own_logo-300x199.jpg
 description: Navigating survival risk.
 ---
 

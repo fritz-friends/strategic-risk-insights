@@ -1,5 +1,38 @@
-.about-content
+.about-bios
 	margin: 0 auto
 	padding: 64px 0 72px
 	width: calc(100% - 48px)
 	max-width: 1024px
+
+.about-bio-container
+	display: grid
+	grid-template-columns: 21.5% 48px 1fr
+	grid-template-areas: "picture . content"
+	padding-bottom: 72px
+	&:last-of-type
+		padding-bottom: 0
+
+.about-bio-content
+	grid-area: content
+	h2
+		margin-top: 0
+
+.about-picture
+	// width: 21.5%
+	// height: auto
+	grid-area: picture
+
+.about-description
+	padding: 56px 24px 40px
+	background-color: $sri-black
+	color: $sri-white
+	background-image: url("../../static/img/speed-lines.svg")
+	background-repeat: repeat-x
+	background-position: left 24px
+	& > *
+		width: 100%
+		max-width: 1024px
+		margin: 0 auto
+		margin-bottom: 1em
+		&:last-of-type
+			margin-bottom: 0

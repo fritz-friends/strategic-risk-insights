@@ -4,33 +4,35 @@ import { Link, graphql } from "gatsby";
 
 import BlogRollForIndex from "../components/BlogRollForIndex";
 import Contact from "../components/Contact";
-import Features from "../components/Features";
 import Layout from "../components/Layout";
 import TrackRecordSlider from "../components/TrackRecordSlider";
 
 export const IndexPageTemplate = ({
 	title,
 	videoSourceURL,
-	intro,
+	thirdParadigm,
+	thirdParadigmDescription,
 	trackrecord,
 }) => (
 	<div>
 		{/* Introduction */}
 		<section className="intro">
 			<h1>{title}</h1>
+			{/* eslint-disable-next-line*/}
 			<video className="video" controls>
 				<source src={videoSourceURL.publicURL} type="video/mp4" />
 			</video>
 		</section>
 
-		{/* services */}
-		<section className="service-blurbs">
+		{/* 3rd Paradigm */}
+		<section className="service-3rdParadigm">
 			<img
 				src="/img/3rd-paradigm-illustration.svg"
 				alt="The 3rd Paradigm"
 				className="paradigm-illustration"
 			/>
-			<Features gridItems={intro.blurbs} />
+			<h2>{thirdParadigm}</h2>
+			<p>{thirdParadigmDescription}</p>
 			<Link to="/services" className="btn btn-reversed btn-large">
 				See Our Services
 			</Link>
@@ -60,12 +62,11 @@ export const IndexPageTemplate = ({
 );
 
 IndexPageTemplate.propTypes = {
-	videoSourceURL: PropTypes.string,
+	videoSourceURL: PropTypes.object,
 	title: PropTypes.string,
-	intro: PropTypes.shape({
-		blurbs: PropTypes.array,
-	}),
-	trackrecord: PropTypes.array,
+	thirdParadigm: PropTypes.string,
+	thirdParadigmDescription: PropTypes.string,
+	trackrecord: PropTypes.object,
 };
 
 const IndexPage = ({ data }) => {
@@ -75,7 +76,8 @@ const IndexPage = ({ data }) => {
 			<IndexPageTemplate
 				videoSourceURL={frontmatter.videoSourceURL}
 				title={frontmatter.title}
-				intro={frontmatter.intro}
+				thirdParadigm={frontmatter.thirdParadigm}
+				thirdParadigmDescription={frontmatter.thirdParadigmDescription}
 				trackrecord={frontmatter.trackrecord}
 			/>
 		</Layout>
@@ -102,20 +104,8 @@ export const pageQuery = graphql`
 				}
 				videoTitle
 				heading
-				intro {
-					blurbs {
-						image {
-							childImageSharp {
-								fluid(maxWidth: 240, quality: 64) {
-									...GatsbyImageSharpFluid
-								}
-							}
-							id
-						}
-						title
-						text
-					}
-				}
+				thirdParadigm
+				thirdParadigmDescription
 				trackrecord {
 					heading
 					testimonials {

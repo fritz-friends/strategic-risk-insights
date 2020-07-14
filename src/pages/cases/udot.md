@@ -3,7 +3,7 @@ templateKey: case-study
 title: Utah Department of Transportation
 order: 7
 featuredpost: true
-logo: /img/media-placeholder.png
+logo: /img/UDOT_logo_large.png
 description: Creating convergence among multiple, diverse stakeholders
 ---
 
