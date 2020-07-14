@@ -21,6 +21,7 @@ export const PodcastTemplate = ({
 				<h1>{title}</h1>
 			</section>
 			<section className="audio-wrapper">
+				{/* eslint-disable-next-line */}
 				<audio controls src={audioFile} className="audio-player">
 					Your browser does not support the
 					<code>audio</code> element.

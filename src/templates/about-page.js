@@ -12,16 +12,17 @@ export const AboutPageTemplate = ({ description, principals, title }) => {
 			<section className="subpage-masthead">
 				<h1>{title}</h1>
 			</section>
-			<section>{Parser(description)}</section>
-			<section>
-				{principals.map((principal) => (
-					<div>
-						<PreviewCompatibleImage
-							imageInfo={principal.photo}
-							className="about-picture"
-						/>
-						{principal.principal}
-						{Parser(principal.text)}
+			<section className="about-description">{Parser(description)}</section>
+			<section className="about-bios">
+				{principals.map((principal, i) => (
+					<div className="about-bio-container" key={i}>
+						<div className="about-picture">
+							<PreviewCompatibleImage imageInfo={principal.photo} />
+						</div>
+						<div className="about-bio-content">
+							<h2>{principal.principal}</h2>
+							{Parser(principal.text)}
+						</div>
 					</div>
 				))}
 			</section>
@@ -39,7 +40,6 @@ AboutPageTemplate.propTypes = {
 };
 
 const AboutPage = ({ data }) => {
-	console.log("data :>> ", data);
 	const { markdownRemark: post } = data;
 
 	return (

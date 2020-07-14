@@ -19,14 +19,7 @@ export const ServicePageTemplate = ({
 			<h1>{title}</h1>
 		</section>
 		<div className="services-container">
-			<div className="services">
-				{Parser(intro.firstText)}
-				<PreviewCompatibleImage
-					imageInfo={intro.image}
-					className="services-picture"
-				/>
-				{Parser(intro.secondText)}
-			</div>
+			<div className="services">{Parser(intro.description)}</div>
 			<div className="services-picture">
 				<PreviewCompatibleImage
 					imageInfo={image}
@@ -114,15 +107,7 @@ export const servicePageQuery = graphql`
 					}
 				}
 				intro {
-					firstText
-					image {
-						childImageSharp {
-							fluid(maxWidth: 2048, quality: 100) {
-								...GatsbyImageSharpFluid
-							}
-						}
-					}
-					secondText
+					description
 				}
 				highlightedservice {
 					heading

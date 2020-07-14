@@ -2,15 +2,15 @@
 templateKey: service-page
 path: /services
 title: Our Services
-image: /img/media-placeholder.png
+image: /img/profit-drivers.png
 intro:
-  firstText: >
+  description: >
     <p>Our practice brings together a century of collective knowledge to bring unique and valuable insights to bear for our clients. We help clients prepare to survive, thrive, and profitably grow in an increasingly volatile, uncertain, complex, & ambiguous (VUCA) marketplace.</p>
     <p>Each of our services exist to help your organization carve out a lasting competitive advantage in your markets.</p>
 
     <p>Competitive advantage in a VUCA world requires that leaders attend to two key process: the “strategy complex” and the culture. Strategy teams that respond well focus on core issues, adapt to changing circumstances, and work to deepen their knowledge of their business and industries. When supported by a culture with strong shared values, respect for all, and a natural curiosity, companies win. They maintain strategic advantage over time.</p>
-  image: /img/profit-drivers.png
-  secondText: <p>We categorize our services as the 3 D’s; we DEPLOY our own expertise to provide custom analysis on strategic risks and solutions, we help executive teams DESIGN and implement their own sustainable programs, and we help organizations DEVELOP and perfect their strategic risk capabilities through training and evaluation services.</p>
+
+    <p>We categorize our services as the 3 D’s; we DEPLOY our own expertise to provide custom analysis on strategic risks and solutions, we help executive teams DESIGN and implement their own sustainable programs, and we help organizations DEVELOP and perfect their strategic risk capabilities through training and evaluation services.</p>
 highlightedservice:
   heading: Recalibrating Strategy Product
   description: >
@@ -23,11 +23,13 @@ highlightedservice:
     <p>Our facilitators help create the open, honest, and trust-filled environment needed for your team to critically assess recent and current decisions and actions. This enables the deep learning that improves future business performance.  Our work begins with a rigorous assessment of your strategic position, and the key assets and processes that drive your competitive advantage.  We facilitate a workshop that reviews important recent decisions and actions for their impact on strategy.  We then help your team turn this knowledge into the wisdom that will enhance future effectiveness. As the process ends, your team will have an actionable plan for success that includes the dates and dollars the hold people accountable.</p>
 
     <p>Companies should recalibrate strategy now in order to:</p>
-    <ul>• Prepare for a world that will continue to require flexible and adaptive actions.</ul>
-    <ul>• Anticipate and respond to the competitive challenges of societal mega-trends.</ul>
-    <ul>• Engage the entire organization in strategy and its execution.</ul>
-    <ul>• Develop a resilient culture capable of continuous learning.</ul>
-    <ul>• Leverage past successes or failures into future performance gains.</ul>
+    <ul>
+    <li>Prepare for a world that will continue to require flexible and adaptive actions.</li>
+    <li>Anticipate and respond to the competitive challenges of societal mega-trends.</li>
+    <li>Engage the entire organization in strategy and its execution.</li>
+    <li>Develop a resilient culture capable of continuous learning.</li>
+    <li>Leverage past successes or failures into future performance gains.</li>
+    </ul>
 
 customers:
   heading: Our Customers

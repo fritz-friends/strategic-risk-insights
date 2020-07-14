@@ -3,7 +3,7 @@ templateKey: case-study
 title: Mitsubishi
 order: 1
 featuredpost: true
-logo: /img/media-placeholder.png
+logo: /img/mhi.png
 description: Understanding competitor risk and its impact on strategy.
 ---
 

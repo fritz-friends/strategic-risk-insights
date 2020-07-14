@@ -23,7 +23,9 @@ export const CasesTemplate = ({ content, contentComponent, logo, title }) => {
 				<h1>{title}</h1>
 			</section>
 			<section className="case-study-main-content">
-				<PreviewCompatibleImage imageInfo={logo} className="case-study-logo" />
+				<div className="case-study-logo">
+					<PreviewCompatibleImage imageInfo={logo} />
+				</div>
 				<CaseContent content={content} className="content-copy" />
 			</section>
 			<section className="contact-section">
