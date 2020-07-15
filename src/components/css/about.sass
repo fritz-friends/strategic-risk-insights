@@ -5,10 +5,13 @@
 	max-width: 1024px
 
 .about-bio-container
-	display: grid
-	grid-template-columns: 21.5% 48px 1fr
-	grid-template-areas: "picture . content"
 	padding-bottom: 72px
+	@media screen and (min-width:27em)
+		display: grid
+		grid-template-columns: 21.5% 24px 1fr
+		grid-template-areas: "picture . content"
+	@media screen and (min-width:45em)
+		grid-template-columns: 21.5% 48px 1fr
 	&:last-of-type
 		padding-bottom: 0
 
@@ -18,9 +21,10 @@
 		margin-top: 0
 
 .about-picture
-	// width: 21.5%
-	// height: auto
-	grid-area: picture
+	margin-bottom: 24px
+	@media screen and (min-width:27em)
+		grid-area: picture
+		margin-bottom: 0
 
 .about-description
 	padding: 56px 24px 40px
