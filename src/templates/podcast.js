@@ -9,9 +9,9 @@ export const PodcastTemplate = ({
 	content,
 	contentComponent,
 	title,
-	audioFile,
+	audioSourceURL,
 }) => {
-	const PostContent = contentComponent || Content;
+	const CastContent = contentComponent || Content;
 	return (
 		<div className="blog-post-wrapper">
 			<section className="subpage-masthead">
@@ -22,13 +22,13 @@ export const PodcastTemplate = ({
 			</section>
 			<section className="audio-wrapper">
 				{/* eslint-disable-next-line */}
-				<audio controls src={audioFile} className="audio-player">
+				<audio controls src={audioSourceURL} className="audio-player">
 					Your browser does not support the
 					<code>audio</code> element.
 				</audio>
 			</section>
 			<section className="blog-post content-copy">
-				<PostContent content={content} />
+				<CastContent content={content} />
 			</section>
 			<section className="contact-section">
 				<Contact />
@@ -43,11 +43,10 @@ PodcastTemplate.propTypes = {
 	description: PropTypes.string,
 	title: PropTypes.string,
 	helmet: PropTypes.object,
-	audioFile: PropTypes.string,
+	audioSourceURL: PropTypes.string,
 };
 
-const BlogPost = ({ data }) => {
-	console.log("data :>> ", data);
+const Podcast = ({ data }) => {
 	const { markdownRemark: post } = data;
 
 	return (
@@ -58,21 +57,21 @@ const BlogPost = ({ data }) => {
 				description={post.frontmatter.description}
 				tags={post.frontmatter.tags}
 				title={post.frontmatter.title}
-				audioFile={post.frontmatter.audioFile.publicURL}
+				audioSourceURL={post.frontmatter.audioSourceURL.publicURL}
 			/>
 		</Layout>
 	);
 };
 
-BlogPost.propTypes = {
+Podcast.propTypes = {
 	data: PropTypes.shape({
 		markdownRemark: PropTypes.object,
 	}),
 };
 
-export default BlogPost;
+export default Podcast;
 
-export const pageQuery = graphql`
+export const castPageQuery = graphql`
 	query PodcastByID($id: String!) {
 		markdownRemark(id: { eq: $id }) {
 			id
@@ -81,7 +80,7 @@ export const pageQuery = graphql`
 				date(formatString: "MMMM DD, YYYY")
 				title
 				description
-				audioFile {
+				audioSourceURL {
 					publicURL
 				}
 			}

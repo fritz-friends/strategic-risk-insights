@@ -54,7 +54,7 @@ exports.createPages = ({ actions, graphql }) => {
 		});
 
 		// Create blog roll list pages
-		const postsPerPage = 2;
+		const postsPerPage = 6;
 		const numberOfBlogPages = Math.ceil(blogPostCount / postsPerPage);
 		Array.from({ length: numberOfBlogPages }).forEach((_, i) => {
 			createPage({
@@ -70,7 +70,7 @@ exports.createPages = ({ actions, graphql }) => {
 		});
 
 		// Create podcast list pages
-		const castsPerPage = 2;
+		const castsPerPage = 6;
 		const numberOfPodcastPages = Math.ceil(podcastCount / castsPerPage);
 		Array.from({ length: numberOfPodcastPages }).forEach((_, i) => {
 			createPage({
@@ -84,30 +84,6 @@ exports.createPages = ({ actions, graphql }) => {
 				},
 			});
 		});
-
-		// Tag pages:
-		// let tags = [];
-		// Iterate through each post, putting all found tags into `tags`
-		// posts.forEach((edge) => {
-		// 	if (_.get(edge, `node.frontmatter.tags`)) {
-		// 		tags = tags.concat(edge.node.frontmatter.tags);
-		// 	}
-		// });
-		// Eliminate duplicate tags
-		// tags = _.uniq(tags);
-
-		// Make tag pages
-		// tags.forEach((tag) => {
-		// 	const tagPath = `/tags/${_.kebabCase(tag)}/`;
-
-		// 	createPage({
-		// 		path: tagPath,
-		// 		component: path.resolve(`src/templates/tags.js`),
-		// 		context: {
-		// 			tag,
-		// 		},
-		// 	});
-		// });
 	});
 };
 
