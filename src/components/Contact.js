@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { navigate } from "gatsby-link";
+// import { navigate } from "gatsby-link";
 
 // const encode = (data) => {
 // 	return Object.keys(data)
