@@ -8,7 +8,8 @@ const initialFormValues = {
 	jobtitle: "",
 	email: "",
 	newsletter: true,
-	speak: false,
+	callMe: false,
+	chapter: false,
 };
 
 const encode = (data) => {
@@ -38,6 +39,7 @@ const Contact = ({ chapter, speak }) => {
 	const handleOnChange = (inputItem, value) => {
 		let tempFormValues = { ...formValues };
 		tempFormValues[inputItem] = value;
+		tempFormValues.chapter = chapter;
 		setFormValues(tempFormValues);
 	};
 
@@ -134,7 +136,7 @@ const Contact = ({ chapter, speak }) => {
 						<input
 							id="speak"
 							name="speak"
-							onChange={(e) => handleOnChange("speak", e.target.checked)}
+							onChange={(e) => handleOnChange("callMe", e.target.checked)}
 							type="checkbox"
 							// {formValues.speak ? 'checked' : null}
 						/>
