@@ -21,7 +21,6 @@ const encode = (data) => {
 const handleSubmit = (e, formValues) => {
 	e.preventDefault();
 	const form = e.target;
-	console.log("formValues :>> ", formValues);
 	fetch("/", {
 		method: "POST",
 		headers: { "Content-Type": "application/x-www-form-urlencoded" },
