@@ -17,10 +17,10 @@ export const Pages = ({ currentPage, numberOfPages, path }) => {
 		numberOfPages <= maxPageNumbers ? numberOfPages : maxPageNumbers;
 
 	const pages = Array.from({ length: length }, (_, i) => start + i);
-
+	console.log("pages path :>> ", path);
 	return pages.map((pageNumber) => (
 		<Link
-			to={pageNumber > 0 ? `${path}/${pageNumber + 1}` : `${path}/`}
+			to={pageNumber > 0 ? `/${path}/${pageNumber + 1}` : `/${path}/`}
 			className="btn btn-pagination btn-pagination--number"
 			key={pageNumber}
 		>
@@ -29,41 +29,46 @@ export const Pages = ({ currentPage, numberOfPages, path }) => {
 	));
 };
 const Pager = ({ currentPage, numberOfPages, path }) => {
-	return (
-		<div className="pagination">
-			<Link
-				to={`${path}/${
-					currentPage > 1
-						? currentPage - 1 > 1
-							? currentPage - 1
-							: ""
-						: numberOfPages
-				}`}
-				className="btn btn-pagination btn-pagination--text"
-			>
-				Previous
-			</Link>
+	console.log("path :>> ", path);
+	if (numberOfPages > 1) {
+		return (
+			<div className="pagination">
+				<Link
+					to={`/${path}/${
+						currentPage > 1
+							? currentPage - 1 > 1
+								? currentPage - 1
+								: ""
+							: numberOfPages
+					}`}
+					className="btn btn-pagination btn-pagination--text"
+				>
+					Previous
+				</Link>
 
-			<Pages
-				currentPage={currentPage}
-				numberOfPages={numberOfPages}
-				path={path}
-			/>
+				<Pages
+					currentPage={currentPage}
+					numberOfPages={numberOfPages}
+					path={path}
+				/>
 
-			<Link
-				to={`${path}/${
-					currentPage < numberOfPages
-						? currentPage + 1 > 1
-							? currentPage + 1
+				<Link
+					to={`/${path}/${
+						currentPage < numberOfPages
+							? currentPage + 1 > 1
+								? currentPage + 1
+								: ""
 							: ""
-						: ""
-				}`}
-				className="btn btn-pagination btn-pagination--text"
-			>
-				Next
-			</Link>
-		</div>
-	);
+					}`}
+					className="btn btn-pagination btn-pagination--text"
+				>
+					Next
+				</Link>
+			</div>
+		);
+	} else {
+		return null;
+	}
 };
 
 export default Pager;
