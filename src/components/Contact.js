@@ -7,8 +7,9 @@ const initialFormValues = {
 	company: "",
 	jobtitle: "",
 	email: "",
+	phone: "(123) 456-7890",
 	newsletter: true,
-	callMe: false,
+	callme: false,
 	chapter: false,
 };
 
@@ -18,28 +19,28 @@ const encode = (data) => {
 		.join("&");
 };
 
-const handleSubmit = (e, formValues) => {
-	e.preventDefault();
-	const form = e.target;
-	fetch("/", {
-		method: "POST",
-		headers: { "Content-Type": "application/x-www-form-urlencoded" },
-		body: encode({
-			"form-name": form.getAttribute("name"),
-			...formValues,
-		}),
-	})
-		.then(() => console.log("Success"))
-		.then(() => navigate(form.getAttribute("action")))
-		.catch((error) => alert(error));
-};
-
 const Contact = ({ chapter, speak }) => {
 	const handleOnChange = (inputItem, value) => {
 		let tempFormValues = { ...formValues };
 		tempFormValues[inputItem] = value;
 		tempFormValues.chapter = chapter;
 		setFormValues(tempFormValues);
+	};
+
+	const handleSubmit = (e, formValues) => {
+		e.preventDefault();
+		const form = e.target;
+		fetch("/", {
+			method: "POST",
+			headers: { "Content-Type": "application/x-www-form-urlencoded" },
+			body: encode({
+				"form-name": form.getAttribute("name"),
+				...formValues,
+			}),
+		})
+			.then(() => setFormValues(initialFormValues))
+			// .then(() => navigate(form.getAttribute("action")))
+			.catch((error) => alert(error));
 	};
 
 	const [formValues, setFormValues] = useState(initialFormValues);
@@ -54,11 +55,7 @@ const Contact = ({ chapter, speak }) => {
 				onSubmit={(e) => handleSubmit(e, formValues)}
 			>
 				<input type="hidden" name="bot-field" />
-				<input
-					type="hidden"
-					name="form-name"
-					value={chapter ? "sri-chapter" : "sri-contact"}
-				/>
+				<input type="hidden" name="form-name" value="sri-contact" />
 
 				<h2>
 					{speak
@@ -115,6 +112,22 @@ const Contact = ({ chapter, speak }) => {
 				</div>
 
 				<div>
+					<input
+						id="phone"
+						name="phone"
+						onChange={(e) => handleOnChange("phone", e.target.value)}
+						placeholder="Phone"
+						required
+						type="tel"
+						id="phone"
+						name="phone"
+						// placeholder="123-456-7890"
+						// pattern="([0-9]{3}) [0-9]{3}-[0-9]{4}"
+						value={formValues.phone}
+					/>
+				</div>
+
+				<div>
 					<label className="checkbox-container">
 						Receive our Quarterly Newsletter
 						<input
@@ -135,7 +148,7 @@ const Contact = ({ chapter, speak }) => {
 						<input
 							id="speak"
 							name="speak"
-							onChange={(e) => handleOnChange("callMe", e.target.checked)}
+							onChange={(e) => handleOnChange("callme", e.target.checked)}
 							type="checkbox"
 							// {formValues.speak ? 'checked' : null}
 						/>
