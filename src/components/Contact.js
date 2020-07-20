@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { navigate } from "gatsby-link";
 
 const initialFormValues = {
 	name: "",
 	company: "",
 	jobtitle: "",
 	email: "",
-	phone: "(123) 456-7890",
+	phone: "",
 	newsletter: true,
-	callme: false,
+	contactme: false,
 	chapter: false,
 };
 
@@ -56,6 +55,7 @@ const Contact = ({ chapter, speak }) => {
 			>
 				<input type="hidden" name="bot-field" />
 				<input type="hidden" name="form-name" value="sri-contact" />
+				<input type="hidden" name="chapter" value={chapter} />
 
 				<h2>
 					{speak
@@ -119,10 +119,6 @@ const Contact = ({ chapter, speak }) => {
 						placeholder="Phone"
 						required
 						type="tel"
-						id="phone"
-						name="phone"
-						// placeholder="123-456-7890"
-						// pattern="([0-9]{3}) [0-9]{3}-[0-9]{4}"
 						value={formValues.phone}
 					/>
 				</div>
@@ -146,9 +142,9 @@ const Contact = ({ chapter, speak }) => {
 					<label className="checkbox-container">
 						Speak with one of our experts
 						<input
-							id="speak"
-							name="speak"
-							onChange={(e) => handleOnChange("callme", e.target.checked)}
+							id="contactme"
+							name="contactme"
+							onChange={(e) => handleOnChange("contactme", e.target.checked)}
 							type="checkbox"
 							// {formValues.speak ? 'checked' : null}
 						/>
