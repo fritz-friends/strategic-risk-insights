@@ -10,6 +10,7 @@ import TrackRecordSlider from "../components/TrackRecordSlider";
 export const IndexPageTemplate = ({
 	title,
 	videoSourceURL,
+	thumbnail,
 	thirdParadigm,
 	thirdParadigmDescription,
 	trackrecord,
@@ -19,7 +20,7 @@ export const IndexPageTemplate = ({
 		<section className="intro">
 			<h1>{title}</h1>
 			{/* eslint-disable-next-line*/}
-			<video className="video" controls>
+			<video className="video" poster={thumbnail.publicURL} controls>
 				<source src={videoSourceURL.publicURL} type="video/mp4" />
 			</video>
 		</section>
@@ -63,6 +64,7 @@ export const IndexPageTemplate = ({
 
 IndexPageTemplate.propTypes = {
 	videoSourceURL: PropTypes.object,
+	thumbnail: PropTypes.object,
 	title: PropTypes.string,
 	thirdParadigm: PropTypes.string,
 	thirdParadigmDescription: PropTypes.string,
@@ -75,6 +77,7 @@ const IndexPage = ({ data }) => {
 		<Layout>
 			<IndexPageTemplate
 				videoSourceURL={frontmatter.videoSourceURL}
+				thumbnail={frontmatter.thumbnail}
 				title={frontmatter.title}
 				thirdParadigm={frontmatter.thirdParadigm}
 				thirdParadigmDescription={frontmatter.thirdParadigmDescription}
@@ -100,6 +103,9 @@ export const pageQuery = graphql`
 			frontmatter {
 				title
 				videoSourceURL {
+					publicURL
+				}
+				thumbnail {
 					publicURL
 				}
 				videoTitle
