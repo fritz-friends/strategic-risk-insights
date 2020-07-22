@@ -5,12 +5,14 @@ import Layout from "../components/Layout";
 import BlogRoll from "../components/BlogRoll";
 import Contact from "../components/Contact";
 import Pager from "../components/Pager";
+import SEO from "../components/SEO";
 
 export default class BlogListPage extends React.Component {
 	render() {
 		const { data, pageContext } = this.props;
 		return (
 			<Layout>
+				<SEO />
 				<section className="subpage-masthead">
 					<h1>Blog</h1>
 				</section>

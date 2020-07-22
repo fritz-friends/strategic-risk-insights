@@ -5,6 +5,7 @@ import { Link, graphql } from "gatsby";
 import BlogRollForIndex from "../components/BlogRollForIndex";
 import Contact from "../components/Contact";
 import Layout from "../components/Layout";
+import SEO from "../components/SEO";
 import TrackRecordSlider from "../components/TrackRecordSlider";
 
 export const IndexPageTemplate = ({
@@ -16,6 +17,11 @@ export const IndexPageTemplate = ({
 	trackrecord,
 }) => (
 	<div>
+		<SEO
+			title={title}
+			description={thirdParadigmDescription}
+			image="/img/3rd-paradigm-illustration.svg"
+		/>
 		{/* Introduction */}
 		<section className="intro">
 			<h1>{title}</h1>

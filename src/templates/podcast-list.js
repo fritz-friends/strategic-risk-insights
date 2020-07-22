@@ -5,12 +5,14 @@ import Layout from "../components/Layout";
 import CastRoll from "../components/CastRoll";
 import Contact from "../components/Contact";
 import Pager from "../components/Pager";
+import SEO from "../components/SEO";
 
 export default class PodcastList extends React.Component {
 	render() {
 		const { data, pageContext } = this.props;
 		return (
 			<Layout>
+				<SEO />
 				<section className="subpage-masthead">
 					<h1>Podcasts</h1>
 				</section>

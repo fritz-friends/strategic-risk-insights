@@ -2,18 +2,25 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
-import Content, { HTMLContent } from "../components/Content";
 import Contact from "../components/Contact";
+import Content, { HTMLContent } from "../components/Content";
+import SEO from "../components/SEO";
 
 export const PodcastTemplate = ({
 	content,
 	contentComponent,
+	description,
 	title,
 	audioSourceURL,
 }) => {
 	const CastContent = contentComponent || Content;
 	return (
 		<div className="blog-post-wrapper">
+			<SEO
+				title={title}
+				description={description}
+				image="/img/3rd-paradigm-illustration.svg"
+			/>
 			<section className="subpage-masthead">
 				<Link className="btn btn-nav btn-nav--secondary" to="/podcast">
 					Back to Podcasts

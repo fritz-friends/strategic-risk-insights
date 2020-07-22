@@ -5,10 +5,12 @@ import { graphql } from "gatsby";
 import Contact from "../components/Contact";
 import Layout from "../components/Layout";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import SEO from "../components/SEO";
 
 export const AboutPageTemplate = ({ description, principals, title }) => {
 	return (
 		<div>
+			<SEO title={title} description={description} />
 			<section className="subpage-masthead">
 				<h1>{title}</h1>
 			</section>

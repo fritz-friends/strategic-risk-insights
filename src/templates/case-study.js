@@ -5,11 +5,19 @@ import Layout from "../components/Layout";
 import Contact from "../components/Contact";
 import Content, { HTMLContent } from "../components/Content";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import SEO from "../components/SEO";
 
-export const CasesTemplate = ({ content, contentComponent, logo, title }) => {
+export const CasesTemplate = ({
+	content,
+	contentComponent,
+	description,
+	logo,
+	title,
+}) => {
 	const CaseContent = contentComponent || Content;
 	return (
 		<div>
+			<SEO title={title} description={description} image={logo} />
 			<section
 				className="case-study-masthead"
 				style={{

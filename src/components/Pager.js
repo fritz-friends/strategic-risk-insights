@@ -17,7 +17,6 @@ export const Pages = ({ currentPage, numberOfPages, path }) => {
 		numberOfPages <= maxPageNumbers ? numberOfPages : maxPageNumbers;
 
 	const pages = Array.from({ length: length }, (_, i) => start + i);
-	console.log("pages path :>> ", path);
 	return pages.map((pageNumber) => (
 		<Link
 			to={pageNumber > 0 ? `/${path}/${pageNumber + 1}` : `/${path}/`}
@@ -29,7 +28,6 @@ export const Pages = ({ currentPage, numberOfPages, path }) => {
 	));
 };
 const Pager = ({ currentPage, numberOfPages, path }) => {
-	console.log("path :>> ", path);
 	if (numberOfPages > 1) {
 		return (
 			<div className="pagination">
