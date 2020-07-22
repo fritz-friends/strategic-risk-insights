@@ -2,9 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import Parser from "html-react-parser";
 import { graphql } from "gatsby";
-import Layout from "../components/Layout";
 import Contact from "../components/Contact";
+import Layout from "../components/Layout";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import SEO from "../components/SEO";
 
 export const ServicePageTemplate = ({
 	image,
@@ -14,6 +15,7 @@ export const ServicePageTemplate = ({
 	customers,
 }) => (
 	<div className="content">
+		<SEO title={title} description={highlightedservice} image={image} />
 		{/* our services section */}
 		<section className="subpage-masthead">
 			<h1>{title}</h1>

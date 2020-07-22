@@ -4,11 +4,13 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import Contact from "../components/Contact";
+import SEO from "../components/SEO";
 
 export const BlogPostTemplate = ({ content, contentComponent, title }) => {
 	const PostContent = contentComponent || Content;
 	return (
 		<div className="blog-post-wrapper">
+			<SEO />
 			<section className="subpage-masthead">
 				<Link className="btn btn-nav btn-nav--secondary" to="/blog">
 					Back to Blog

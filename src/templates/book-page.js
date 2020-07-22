@@ -2,9 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import Parser from "html-react-parser";
 import { graphql } from "gatsby";
+import Contact from "../components/Contact";
 import Layout from "../components/Layout";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
-import Contact from "../components/Contact";
+import SEO from "../components/SEO";
 
 export const BookTemplate = ({ markup }) => {
 	const {
@@ -20,6 +21,7 @@ export const BookTemplate = ({ markup }) => {
 
 	return (
 		<div>
+			<SEO title={title} description={description} />
 			<section className="subpage-masthead">
 				<h1>{title}</h1>
 			</section>
