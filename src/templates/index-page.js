@@ -20,7 +20,7 @@ export const IndexPageTemplate = ({
 		<SEO
 			title={title}
 			description={thirdParadigmDescription}
-			image="/img/3rd-paradigm-illustration.svg"
+			image="/img/website/3rd-paradigm-illustration.svg"
 		/>
 		{/* Introduction */}
 		<section className="intro">

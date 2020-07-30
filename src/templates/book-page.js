@@ -50,7 +50,14 @@ export const BookTemplate = ({ markup }) => {
 
 			{/* Buy Now */}
 			<section className="buy-now-section">
-				<h2>Buy Now</h2>
+				<a
+					className="btn btn-small"
+					href="https://www.amazon.com/Strategic-Risk-Management-Competitive-Advantage/dp/1523086955/ref=sr_1_6?crid=3SYCZBG4A2LCK&keywords=strategic+risk+management&qid=1572552276&s=books&sprefix=Strategic+risk%2Cstripbooks%2C194&sr=1-6"
+					target="_blank"
+					rel="noreferrer"
+				>
+					Buy Now
+				</a>
 			</section>
 
 			{/* Description */}
