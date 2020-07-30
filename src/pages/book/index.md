@@ -9,7 +9,7 @@ secondReviewer: <b>Hans Læssøe,</b> Former Risk Officer, LEGO Corporation
 thirdReview: >-
   “This book is a ‘must read’ for anyone working in the area of strategic risk management (SRM).  The authors present innovative new ideas and tools for SRM, together with many insightful examples of companies that have successfully and unsuccessfully faced strategic risks.  These real-world examples bring the book to life and it was a pleasure to read!”
 thirdReviewer: <b>Betty J. Simkins,</b> Regents Professor, Williams Chair, and Department Head of Finance, Spears School of Business, Oklahoma State University
-image: /img/media-placeholder.png
+image: /img/website/book-cover.jpg
 description: >-
   <p><i>Strategic Risk Management</i> provides a comprehensive set of tools to help executives to plan systematically and practically not only to survive but to truly thrive in a competitive world that is increasing VUCA (Volatile, Uncertain, Complex, Ambiguous) world.</p>
 

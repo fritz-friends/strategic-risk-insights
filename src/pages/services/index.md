@@ -34,10 +34,10 @@ highlightedservice:
 customers:
   heading: Our Customers
   logos:
-    - logo: /img/media-placeholder.png
-    - logo: /img/media-placeholder.png
-    - logo: /img/media-placeholder.png
-    - logo: /img/media-placeholder.png
-    - logo: /img/media-placeholder.png
-    - logo: /img/media-placeholder.png
+    - logo: /img/website/hitlab.png
+    - logo: /img/website/ford.png
+    - logo: /img/website/kba.png
+    - logo: /img/website/navajoed.png
+    - logo: /img/website/lhm.png
+    - logo: /img/website/uba.png
 ---

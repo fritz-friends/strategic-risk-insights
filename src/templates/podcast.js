@@ -19,7 +19,7 @@ export const PodcastTemplate = ({
 			<SEO
 				title={title}
 				description={description}
-				image="/img/3rd-paradigm-illustration.svg"
+				image="/img/website/3rd-paradigm-illustration.svg"
 			/>
 			<section className="subpage-masthead">
 				<Link className="btn btn-nav btn-nav--secondary" to="/podcast">

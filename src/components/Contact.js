@@ -125,7 +125,7 @@ const Contact = ({ chapter, speak }) => {
 
 				<div>
 					<label className="checkbox-container">
-						Receive our Quarterly Newsletter
+						Receive our Weekly Newsletter
 						<input
 							id="newsletter"
 							defaultChecked
