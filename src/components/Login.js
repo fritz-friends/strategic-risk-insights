@@ -57,6 +57,7 @@ const Login = ({ className }) => {
 						netlify-honeypot="bot-field"
 						method="post"
 						name="login"
+						className="login-form"
 						onSubmit={(e) => handleSubmit(e, formValues)}
 					>
 						<input type="hidden" name="bot-field" />
@@ -85,9 +86,9 @@ const Login = ({ className }) => {
 							/>
 						</div>
 
-						<div>
-							{invalidLogin ? <p>Invalid email or password</p> : <p>&nbsp;</p>}
-						</div>
+						
+							{invalidLogin ? <div><p>Invalid email or password</p></div> : undefined }
+						
 
 						<div className="login-button-container">
 							<div>
