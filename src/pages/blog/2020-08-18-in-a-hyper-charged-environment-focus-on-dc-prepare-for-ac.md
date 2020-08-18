@@ -1,0 +1,28 @@
+---
+templateKey: blog-post
+title: "In a hyper-charged environment: Focus on DC, Prepare for AC"
+date: 2020-03-30T21:53:13.435Z
+description: The first in a series of Coronavirus  Updates
+featuredpost: true
+---
+![](/img/front-windshield-and-lightening.jpg "The Future as we see it today")
+
+Coronavirus (COVID-19) continues to wreak economic havoc. In less than a week, the Wall Street Journal’s headlines have become more ominous. We’re out of “bear territory” to “meltdown,” to the “shortest bear market in history.” No one knows for sure what tomorrow will bring. I like to frame this pandemic with an electrical metaphor because it helps me think through how today might be different than tomorrow. There are two ways power throughs through a circuit, Direct Current (DC) and Alternating Current (AC). Historically, DC came before AC. Right now, we all live in a DC (During Corona) world, and most of us will survive to live in an AC one.
+
+What we do during DC will matter AC. Let me review four basic and stable features of the DC world in which we now live. Understanding these features will help you, and your bank, survive DC and be ready to thrive in AC.
+
+**First**, DC isn’t a risk event, it’s an uncertainty event. A hundred years ago, economist Frank Knight highlighted the crucial difference between risk and uncertainty. Put simply, risks are calculable, uncertainties aren’t. We can, for example, calculate the anticipated velocity of the Coronavirus once it reaches the stage of community transmission. We can’t, however, calculate the responses of policy makers, and citizens responding to those policies. How the DC world concludes will depend on both the risk of transmission/ infection (which can be modeled), and on the uncertain behaviors of politicians, health officials, and billions of ordinary citizens (which defy modelling).
+
+**Second**, the old saying “truth is the first casualty of war” applies in the current situation, which some have described as a global war on the germ. We’ve seen assumptions cast as truth, dissembling, and even outright lies. Everyone, from your valuable employees and key customers, to the supplier of your cleaning supplies wants the truth, and the number one job of every CEO in this environment is to provide it. That means being honest about facts, saying “we don’t know” when we don’t know, but also being honest about your expectations and hopes, “we’ll survive (and thrive) because we are resilient.” Great leaders will continue to be transparent and open, and they’ll be highly visible in reassuring the people who depend on your bank. and who your bank depends on to make your business thrive.
+
+**Third**, DC will last longer than you think. Many years ago, my good friend Ron Mitchell, a professor of entrepreneurship at Texas Tech University, taught me “Ron’s rule of 4.” It will take four times longer, and cost four times as much, as you think it will to start a business. The rule provides a rough and ready way to think through the DC world. I had shifted a planned a trip to Tanzania (which recorded its first confirmed case a week ago) from May to August, when I thought the virus would have subsided. A colleague in the public health community then gave me his opinion: “you’ll go in a year.”
+
+Just about 4 times longer than I expected. The current administration hopes to have the economy “roaring back” by Easter (two weeks from now). Maybe a sustained comeback happens by the 4th of July, and it’s probably not a roar, but certainly louder than a whisper.
+
+**Fourth**, DC will end, but things won’t go back to “normal.” The longer DC lasts, with its social distancing and business closures, the less “normal” the AC world will look, and the longer the adjustment runway to that new world. In the short run, economic growth may rebound, and may even reach pre-DC levels within a few months; however, the underlying texture of what people buy and sell will transform. People will borrow and lend to meet reach different goals, and organizational priorities will change. Your best bet in today’s DC world? Set up a cross-functional team to begin thinking about what an AC world might look like. Engage in a scenario planning exercise, or something like it, to sketch out what different AC worlds might look like, and then begin thinking about which investments, of time, energy, human and financial capital will best prepare your bank for what happens AC.
+
+English naturalist Charles Darwin summed up the situation over 150 years ago. Darwin’s book was titled On the Origin of the Species, but his underlying concern wasn’t with beginnings, it was with ongoing survival. He noted that “It is not the strongest of the species that survives, nor the most intelligent. It is the one that is most adaptable to change.” DC and AC will transform competitive landscapes. Some of today’s strongest banks will make serious missteps and lose, other, more nimble ones will seize opportunities and win. Surviving DC requires flexibility, you know that by now. Thriving in an AC world will require prescient adaptability.
+
+What is your organization doing to deal with each of the four basic features of our DC world? I’d love to hear from you.
+
+Paul C. Godfrey is the William and Roceil Low Professor of Business Strategy at the BYU Marriott School of Business and founding partner of *[Strategic Risk Insights, LLC](https://strategicriskinsights.com/)*. The consultancy allows clients to tap into their almost century of collective experience with risk management to gain superior insights for winning in a VUCA world. You can reach him at *[paul_godfrey@strategicriskinsishts.com](mailto:paul_godfrey@strategicriskinsishts.com)*.
