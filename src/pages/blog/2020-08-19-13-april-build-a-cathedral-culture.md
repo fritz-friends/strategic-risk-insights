@@ -1,0 +1,33 @@
+---
+templateKey: blog-post
+title: "13 April: Build a Cathedral Culture"
+date: 2020-04-13T22:29:38.661Z
+featuredpost: true
+---
+![](/img/dreamstime_cologn-cathedral-1.jpg)
+
+<!--StartFragment-->
+
+My wife listened to a radio program this week where the speaker talked about the idea that businesses need a “cathedral culture” to get through the Coronavirus crisis. A cathedral culture meant one built for the long haul, based on the fact that it took so long to build the world’s great Christian cathedrals. My mind immediately went to the Cologne Cathedral in Germany. I’ve spent significant time in the country, and that particular cathedral is simply stunning. You see it from 30 miles away.
+
+The Cologne Cathedral, or Kölner Dom in German, sits on a site occupied by Christian worshippers since the Fourth Century CE. The original structure burned to the ground in 1248, and work began on a new cathedral that year. The first part of the building, the choir, was consecrated 74 years later, in 1322. Construction proceeded at an uneven pace, and the Cathedral was finally completed in 1880, six centuries after work began. 19th Century architects used 13th Century plans to finish the building. That’s thinking, designing, and building for the long term! Given that the average life span of most corporations is less than 40 years, what does it mean to have a “Cathedral Culture” today? Let me highlight four elements of that culture, each of which is useful in today’s crisis.
+
+Currents not waves. Cathedral builders take a long-term perspective in budgeting and planning, they don’t get hung up in the crises of the day. My good friend Christophe Beck, COO of Ecolab, talks about focusing on currents, not waves. Waves are surface phenomena; currents are deep drivers. Waves can be frightening and scary, and it takes a good skipper to navigate big ones. Currents determine what the wave pattern will look like long into the future. Good leaders learn to distinguish waves from currents. Coronacrisis is a wave, the factors that brought it on are currents.
+
+Leaders need to think hard about short-term cost cutting (navigating the waves) that weakens the organization’s ability to recover and thrive over the long haul (the current). The strongest current running in any organization is human capital, and so be very leery about cutting staff. That’s an easy wave to surf, but also resist the temptation to get out of the human capital current and shelve hiring, training and development investments that build human capital and improve motivation. Saving money to keep people on the payroll makes great strategic sense, cutting payroll to save money less so. One large company I know cut their strategic marketing function completely this past week. They’ll be able to execute on current priorities but will have no idea what to do when things turn around.
+
+**Be Mission Driven.** It took six hundred years to build the Cologne Cathedral. I’m sure that many workers, from stone masons, carpenters, and painters to architects, financiers, and government officials saw the cathedral as a sink hole, but one that would keep them employed for a lifetime. That logic helped building progress, but what really fired the hearts and imaginations of the tens of thousands who worked on the project was their devotion to God. They were building something much larger and longer lasting than just walls and windows. What made each of Europe’s grand cathedrals great was the fine craftmanship that came from working for something much larger than a paycheck.
+
+<!--StartFragment-->
+
+Crises threaten the day-to-day, but they often shift our focus from the What’s in life to the Why’s. My colleague David Kryscynski and his colleagues looked at what happened to lawyers who worked in some of the most prestigious law firms after the terrorist attacks of 9/11. They found that many of them left their high paying jobs for positions that provided greater meaning, and those practices that engaged in their own meaning rich social initiatives in-house had an easier time retaining their critical human capital. Yes, your people need paychecks, and they need to know as soon as possible about what the immediate future holds; however, what they yearn for is a job that means something. Your mission will connect them to that larger something. People think they need shelter, give them a cathedral.
+
+**Relationships, First and Last.** That same large company that axed its strategic marketing group also sent a letter to suppliers telling them it was cutting their prices by 15%. Good luck with that! I’m sure they’ll have to pay todays invoices at current rates, and I’m sure they’ll see their supplier pool shrink in the next round. Those that remain will remember this event and prove far less flexible the next time the company needs help. Business must be a win-win proposition for both parties. Reject the tempting idea that in a crisis it becomes a win-lose game. In the AC (After Coronavirus) world, deep relationships will continue to create value, maybe more so than before.
+
+Reach out today to your critical business partners. Wish them well. Listen to their struggles and their stories. Invest your time in listening and nurturing relationships. That’s how you build a cathedral.
+
+**Measurement and Data Matter.** If we’ve learned one thing through this crisis it’s that getting the right measures, and knowing what they mean, can be the difference between prudence and folly. People obsess over the daily confirmed case count, and they falsely assume that it tracks progress against the disease. Todays case count captures those infected two weeks ago, so plan on lags. Over the longer term, focus on cathedral measures, ones where the lack of investment today won’t create pain until a distant tomorrow. How many important employees did you lose? How much of their goodwill, or customer goodwill, did you burn through? How much did you build? What have we learned through this crisis? What’s happening to our brand?
+
+Measures matter, but the willingness to listen to the data and respond appropriately matters more. A cathedral culture requires the willingness to collect uncomfortable data and listen to what they say. Be truly data driven. It’s no surprise to me that ten of the top twelve countries in the confirmed case count are liberal democracies. Part of that fact is functional, these countries have greater wealth and more global ties, but part is a system that promotes and values real data. There’s no attempt to hide data that we don’t really like. The challenge all leaders face today is to use the data they have to make wise decisions.
+
+<!--EndFragment-->
