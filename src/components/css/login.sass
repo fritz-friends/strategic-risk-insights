@@ -1,7 +1,7 @@
 .login
     background-color: $sri-black
-    max-width: 592px
-    padding: 24px
+    // max-width: 592px
+    padding: 48px
     box-sizing: border-box
     // left: calc(50% - 592px/2)
     @media screen and (min-width:26em)
@@ -28,6 +28,10 @@
         line-height: 20px
         color: $sri-white
 
+.login-form
+    width: 100%
+    max-width: 496px
+
 .login-backdrop
     position: fixed
     z-index: 1040
@@ -36,20 +40,25 @@
     left: 0
     right: 0
     background-color: $sri-black
-    opacity: 0.5
+    opacity: 0.75
 
 .login-button-container
     display: flex
-    justify-content: flex-end
+    // justify-content: flex-end
+    > div
+        margin-right: 8px
+    .btn-reversed
+        &:hover
+            background: $sri-violet
 
 .login-modal
     position: fixed
-    height: 328px
-    width: 592px
+    width: calc(100% - 48px)
+    max-width: 592px
     z-index: 1040
-    top: calc(50% - 328px/2)
-    left: calc(50% - 592px/2)
+    top: 50%
+    left: 50%
+    transform: translateX(-50%) translateY(-50%)
     border: 1px solid $sri-violet
     background-color: $sri-black
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5)
-    padding: 20px
