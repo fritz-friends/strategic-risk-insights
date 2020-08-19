@@ -9,6 +9,7 @@ const PodcastPreview = ({ entry, widgetFor }) => {
 			description={entry.getIn(["data", "description"])}
 			title={entry.getIn(["data", "title"])}
 			audioSourceURL={entry.getIn(["data", "audioSourceURL"])}
+			preview={true}
 		/>
 	);
 };
