@@ -6,11 +6,16 @@ import Content, { HTMLContent } from "../components/Content";
 import Contact from "../components/Contact";
 import SEO from "../components/SEO";
 
-export const BlogPostTemplate = ({ content, contentComponent, title }) => {
+export const BlogPostTemplate = ({
+	content,
+	contentComponent,
+	title,
+	preview,
+}) => {
 	const PostContent = contentComponent || Content;
 	return (
 		<div className="blog-post-wrapper">
-			<SEO />
+			{!preview ? <SEO /> : null}
 			<section className="subpage-masthead">
 				<Link className="btn btn-nav btn-nav--secondary" to="/blog">
 					Back to Blog
@@ -33,6 +38,7 @@ BlogPostTemplate.propTypes = {
 	description: PropTypes.string,
 	title: PropTypes.string,
 	helmet: PropTypes.object,
+	preview: PropTypes.bool,
 };
 
 const BlogPost = ({ data }) => {

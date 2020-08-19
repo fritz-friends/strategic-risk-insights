@@ -12,15 +12,18 @@ export const PodcastTemplate = ({
 	description,
 	title,
 	audioSourceURL,
+	preview,
 }) => {
 	const CastContent = contentComponent || Content;
 	return (
 		<div className="blog-post-wrapper">
-			<SEO
-				title={title}
-				description={description}
-				image="/img/website/3rd-paradigm-illustration.svg"
-			/>
+			{!preview ? (
+				<SEO
+					title={title}
+					description={description}
+					image="/img/website/3rd-paradigm-illustration.svg"
+				/>
+			) : null}
 			<section className="subpage-masthead">
 				<Link className="btn btn-nav btn-nav--secondary" to="/podcast">
 					Back to Podcasts
@@ -51,6 +54,7 @@ PodcastTemplate.propTypes = {
 	title: PropTypes.string,
 	helmet: PropTypes.object,
 	audioSourceURL: PropTypes.string,
+	preview: PropTypes.bool,
 };
 
 const Podcast = ({ data }) => {
