@@ -1,0 +1,31 @@
+---
+templateKey: blog-post
+title: "06 April:  The Opportunity to Question Assumptions"
+date: 2020-04-06T22:21:17.981Z
+featuredpost: true
+---
+
+
+
+
+![]()
+
+This is a busy week for banks. Lenders are scrambling to figure out their role as the conduits of cash to strapped businesses, large and small. Congress worked as fast as politically possible to pass the Coronavirus Aid, Relief, and Economic Security Act (CARES) Act, which will pump billions into many sectors of the US economy. Now its implementation time, as concerns over application vetting and potential long-term liability bedevil the distribution of needed loans.
+
+As if that weren’t enough, there’s also the very real concerns of taking care of your own families, your employees and their families, and dealing with the cognitive and emotional drain and strain as we all learn how broad, deep, and long the impacts of the coronavirus will be felt.
+
+Amid so much tactical uncertainty, I invite you to think about strategic opportunity. I talked with a friend this week who sees the COVID-19 situation as a huge opportunity: the opportunity to question some of his deepest assumptions, about his personal life and about his business. I’ve thought over the last few days about what that means for CEOs, board members, and other senior leaders of the nation’s banks. Let me suggest four strategic assumptions you might want to rethink in regard to one clear impact of the virus: our dependence on the internet.
+
+**1.My employees need to “come to work” every da**y. Social distancing and remote work are showing us how many of our people don’t need to come into the office every day for the work of our organization to get done. Before your employees return to work en masse, you ought to think through if they should. Smart leaders in every industry are doing just that. What if only 25% of your workers need to be in the office every day? Think about the impacts in terms of building utilization and the need for parking, childcare, etc. Think about what that means for your customers, and those you’ve lent money to. More people working from home will change the nature of residential real estate and neighborhood planning, increasing the need for more small retail, homes with more technological infrastructure, and home office space. What about commercial real estate? We’ll see a continued rebirth of small, neighborhood retail and dining, but a glut of large office space and parking garages. Fewer commuters would mean fewer cars sold. Take an hour and begin to think about the ripple effects and where opportunities lie for your bank.
+
+**2.My employees don’t need to “come to work” at all.** This is the flip side of assumption 1. Many of us have seen real productivity gains through remote work. I’ve seen two in my own life. First, the lack of a commute and associated hassle has opened up 6-8 hours/ week for more productive work. Second, the lack of trivial interruptions has dramatically improved my ability to focus on deep and complex tasks. There are costs, however, to all of this, and right now we’re in crisis mode and not attending those costs. I see costs in the big 3 C’s. There are real costs in terms of communication in virtual classes and meetings as we miss many of the non-verbal cues that carry so much meaning; coordination costs rise because many of those informal interruptions created opportunities to coordinate work on the fly and avoided bigger meetings; finally, we have yet to see the costs to corporate culture that arise when we aren’t together sharing common experiences. The reality is that you’ll still need an office; you’ll just have to be laser-focused on how it adds value.
+
+**3.. An online presence that’s just OK is OK.** Banking websites and apps reinforce existing stereotypes that banks (and bankers) aren’t on the cutting edge of technology. If your bank falls into this category, you’ll see your both your retail and commercial business decline at a more rapid rate. With so much online exposure during the Coronacrisis, retail and commercial customers become more grateful for great websites and less patient with poor ones. Given our already frazzled nerves, we have even less willingness to endure poor user experiences. Now is the time to critically evaluate your online presence and realize that being OK won’t be OK in the new, AC (After Corona) world. Building a better online experience for your customers will pay off in the long run. You may not gain many new ones, but you’ll see less attrition among existing ones. You’ll need at least parity with the best of what’s online today, and if you become best in class, you’ll see rewards in terms of customer retention and overall activity. Who knows, you might even attract new customers fleeing sub-par online banking.
+
+![](/img/dreamstime_man-pondering-small.jpg)
+
+ I’ve marveled at how quickly Corona-scams have emerged, everything from virus-laden tracking websites to fake donation portals. We know that in times of crisis, when our mental bandwidth is spread thin, we don’t attend to the tiny details—or the major ones—that open the door to fraud. In the rush to distribute CARES funds, banks who let down their guards, opting for quick online servicing instead of slower, more robust systems, expose themselves to unscrupulous borrowers and scammers. That’s today, but the laxity that accompanies all-time highs in internet will persist and easily become the new normal. We’ll see more of the filth and stealth that an increase in online activity invites. As banks ponder ways to cut costs, cybersecurity isn’t one of them. In fact, I’d suggest an increase in cybersecurity spending somewhere between 50-100% over the next two years.
+
+Good luck with this week. Opening the floodgates to funding is a critical short-term imperative. The economic survival of millions of people lies in your hands as never before. Amidst all the pressure of these important tasks, take a few minutes to ponder the future, for there will be a future. Small actions taken today to plan and prepare for that future will pay dividends down the road. One of the smallest, yet most vital, actions is to begin to question your own assumptions about what will work in the AC world. Good luck.
+
+<!--EndFragment-->
