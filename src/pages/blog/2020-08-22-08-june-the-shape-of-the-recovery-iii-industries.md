@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: "08 June: The Shape of the recovery III:  Industries"
+title: "08 June: The shape of the recovery III:  Industries"
 date: 2020-06-08T20:20:09.230Z
 featuredpost: true
 ---
