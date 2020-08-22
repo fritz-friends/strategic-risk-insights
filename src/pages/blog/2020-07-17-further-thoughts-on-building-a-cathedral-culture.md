@@ -1,10 +1,14 @@
 ---
 templateKey: blog-post
-title: Further Thoughts on building a Cathedral Culture
+title: "08 May: Further Thoughts on building a Cathedral Culture"
 date: 2020-05-08T19:29:18.136Z
 description: No it's not
 featuredpost: true
 ---
+![](/img/dreamstime_cologn-cathedral-1.jpg)
+
+![]()
+
 **Question**: What currents will be the most valuable as companies restart?
 
 **Answer**: The ability of people to problem solve. All of us want certainty, and we’ll do anything we can to avoid the unknown. When we have to, however, we’re all really good at problem-solving. As I’m planning for my future, I’m not trying to see the “big picture” of 6-8 months from now. I know the peaks are there, but I’m focused now on climbing the hills just ahead. I have a general direction and can adjust on the fly to climb over the rocks, around the trees, and through the ravines. Trust your people to do the same.
