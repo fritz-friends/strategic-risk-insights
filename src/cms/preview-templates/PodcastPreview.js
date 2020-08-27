@@ -8,6 +8,7 @@ const PodcastPreview = ({ entry, widgetFor }) => {
 			content={widgetFor("body")}
 			description={entry.getIn(["data", "description"])}
 			title={entry.getIn(["data", "title"])}
+			useUploadedFile={entry.getIn(["data", "useUploadedFile"])}
 			audioSourceURL={entry.getIn(["data", "audioSourceURL"])}
 			preview={true}
 		/>

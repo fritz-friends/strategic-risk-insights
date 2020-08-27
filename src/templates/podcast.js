@@ -11,6 +11,7 @@ export const PodcastTemplate = ({
 	contentComponent,
 	description,
 	title,
+	useUploadedFile,
 	audioSourceURL,
 	preview,
 }) => {
@@ -30,13 +31,15 @@ export const PodcastTemplate = ({
 				</Link>
 				<h1>{title}</h1>
 			</section>
-			<section className="audio-wrapper">
-				{/* eslint-disable-next-line */}
-				<audio controls src={audioSourceURL} className="audio-player">
-					Your browser does not support the
-					<code>audio</code> element.
-				</audio>
-			</section>
+			{useUploadedFile && audioSourceURL ? (
+				<section className="audio-wrapper">
+					{/* eslint-disable-next-line */}
+					<audio controls src={audioSourceURL} className="audio-player">
+						Your browser does not support the
+						<code>audio</code> element.
+					</audio>
+				</section>
+			) : null}
 			<section className="blog-post content-copy">
 				<CastContent content={content} />
 			</section>
@@ -53,6 +56,7 @@ PodcastTemplate.propTypes = {
 	description: PropTypes.string,
 	title: PropTypes.string,
 	helmet: PropTypes.object,
+	useUploadedFile: PropTypes.bool,
 	audioSourceURL: PropTypes.string,
 	preview: PropTypes.bool,
 };
@@ -69,6 +73,7 @@ const Podcast = ({ data }) => {
 				tags={post.frontmatter.tags}
 				title={post.frontmatter.title}
 				audioSourceURL={post.frontmatter.audioSourceURL.publicURL}
+				usedUploadedFile={post.frontmatter.useUploadedFile}
 			/>
 		</Layout>
 	);
@@ -91,6 +96,7 @@ export const castPageQuery = graphql`
 				date(formatString: "MMMM DD, YYYY")
 				title
 				description
+				useUploadedFile
 				audioSourceURL {
 					publicURL
 				}

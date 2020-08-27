@@ -34,7 +34,7 @@ export const IndexPageTemplate = ({
 		{/* 3rd Paradigm */}
 		<section className="service-3rdParadigm">
 			<img
-				src="/img/3rd-paradigm-illustration.svg"
+				src="/img/website/3rd-paradigm-illustration.svg"
 				alt="The 3rd Paradigm"
 				className="paradigm-illustration"
 			/>
