@@ -1,4 +1,3 @@
-import React from "react";
 import CMS from "netlify-cms-app";
 // import uploadcare from "netlify-cms-media-library-uploadcare";
 // import cloudinary from "netlify-cms-media-library-cloudinary";
@@ -20,46 +19,31 @@ CMS.registerPreviewTemplate("podcast", PodcastPreview);
 CMS.registerPreviewTemplate("book", BookPreview);
 CMS.registerPreviewTemplate("about", AboutPagePreview);
 
-const video = {
-	label: "Video",
-	id: "video",
-	fromBlock: (match) =>
-		match && {
-			video: match[2],
-			alt: match[1],
-		},
-	toBlock: ({ alt, video }) => `![${alt || ""}](${video || ""})`,
-	// eslint-disable-next-line react/display-name
-	toPreview: ({ alt, video }, getAsset, fields) => {
-		console.log("Are we making it here?");
-		const videoField = fields?.find((f) => f.get("name") === "video");
-		console.log("videoField :>> ", videoField);
-		const src = getAsset(video, videoField);
-		console.log("src :>> ", src);
-		// return (
-		// 	<>
-		// 		<video poster={src || ""} controls alt={alt || ""}>
-		// 			<source src={src || ""} type="video/mp4" />
-		// 		</video>
-		// 	</>
-		// );
-		return <p>Hello There</p>;
+CMS.registerEditorComponent({
+	// Internal id of the component
+	id: "youtube",
+	// Visible label
+	label: "YouTube",
+	// Fields the user need to fill out when adding an instance of the component
+	fields: [{ name: "id", label: "YouTube Video ID", widget: "string" }],
+	// Pattern to identify a block as being an instance of this component
+	pattern: /<(.*)d\/(.*)\" f(.*)/,
+	// Function to extract data elements from the regexp match
+	fromBlock: function (match) {
+		return {
+			id: match[2],
+		};
 	},
-	pattern: /^!\[(.*)\]\((.*?)(\s"(.*)")?\)$/,
-	fields: [
-		{
-			label: "Video",
-			name: "video",
-			widget: "file",
-			media_library: {
-				allow_multiple: false,
-			},
-		},
-		{
-			label: "Alt Text",
-			name: "alt",
-		},
-	],
-};
-
-CMS.registerEditorComponent(video);
+	// Function to create a text block from an instance of this component
+	toBlock: function (obj) {
+		return `<iframe width="560" height="315" src="https://www.youtube.com/embed/${obj.id}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+	},
+	// Preview output for this component. Can either be a string or a React component
+	// (component gives better render performance)
+	toPreview: function (obj) {
+		return (
+			`<img src="http://img.youtube.com/vi/${obj.id}` +
+			`/hqdefault.jpg" alt="YouTube Video"/>`
+		);
+	},
+});
