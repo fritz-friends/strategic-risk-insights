@@ -27,6 +27,7 @@ CMS.registerEditorComponent({
 	// Fields the user need to fill out when adding an instance of the component
 	fields: [{ name: "id", label: "YouTube Video ID", widget: "string" }],
 	// Pattern to identify a block as being an instance of this component
+	// eslint-disable-next-line
 	pattern: /<(.*)d\/(.*)\" f(.*)/,
 	// Function to extract data elements from the regexp match
 	fromBlock: function (match) {

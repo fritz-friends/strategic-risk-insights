@@ -3,6 +3,7 @@ templateKey: podcast
 title: Podcasts Coming Soon
 date: 2020-07-17T19:31:23.386Z
 description: No its not
+useUploadedFile: false
 audioSourceURL: ./George_Gershwin_playing_Rhapsody_in_Blue.ogg
 ---
 
