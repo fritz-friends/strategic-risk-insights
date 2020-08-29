@@ -28,7 +28,7 @@ CMS.registerEditorComponent({
 	fields: [{ name: "id", label: "YouTube Video ID", widget: "string" }],
 	// Pattern to identify a block as being an instance of this component
 	// eslint-disable-next-line
-	pattern: /<(.*)d\/(.*)\" f(.*)/,
+	pattern: /<iframe width="560"(.*)d\/(.*)\" f(.*)/,
 	// Function to extract data elements from the regexp match
 	fromBlock: function (match) {
 		return {
@@ -46,5 +46,32 @@ CMS.registerEditorComponent({
 			`<img src="http://img.youtube.com/vi/${obj.id}` +
 			`/hqdefault.jpg" alt="YouTube Video"/>`
 		);
+	},
+});
+
+CMS.registerEditorComponent({
+	// Internal id of the component
+	id: "podcast",
+	// Visible label
+	label: "Podcast",
+	// Fields the user need to fill out when adding an instance of the component
+	fields: [{ name: "id", label: "Podcast iFrame embed", widget: "string" }],
+	// Pattern to identify a block as being an instance of this component
+	// eslint-disable-next-line
+	pattern: /<iframe src(.*)/,
+	// Function to extract data elements from the regexp match
+	fromBlock: function (match) {
+		return {
+			id: match[0],
+		};
+	},
+	// Function to create a text block from an instance of this component
+	toBlock: function (obj) {
+		return obj.id;
+	},
+	// Preview output for this component. Can either be a string or a React component
+	// (component gives better render performance)
+	toPreview: function (obj) {
+		return obj.id;
 	},
 });
