@@ -63,7 +63,6 @@ PodcastTemplate.propTypes = {
 
 const Podcast = ({ data }) => {
 	const { markdownRemark: post } = data;
-
 	return (
 		<Layout>
 			<PodcastTemplate
@@ -72,7 +71,11 @@ const Podcast = ({ data }) => {
 				description={post.frontmatter.description}
 				tags={post.frontmatter.tags}
 				title={post.frontmatter.title}
-				audioSourceURL={post.frontmatter.audioSourceURL.publicURL}
+				audioSourceURL={
+					post.frontmatter.audioSourceURL
+						? post.frontmatter.audioSourceURL.publicURL
+						: ""
+				}
 				usedUploadedFile={post.frontmatter.useUploadedFile}
 			/>
 		</Layout>
