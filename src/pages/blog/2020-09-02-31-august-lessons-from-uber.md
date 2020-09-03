@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: "31 August:  Lessons from Uber"
-date: 2020-08-31T18:55:01.625Z
+date: 2020-09-01T00:49:28.407Z
 featuredpost: true
 ---
 ![](/img/dreamstime_uber_eats.jpg)
