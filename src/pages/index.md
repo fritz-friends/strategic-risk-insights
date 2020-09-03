@@ -2,7 +2,7 @@
 templateKey: index-page
 title: "The Third Paradigm of Risk Management: Linking Strategy and Risk to Create Value."
 videoSourceURL: "/img/website/SRI-Intro.mov"
-thumbnail: "/img/website/SRI-Intro-Thumbnail.png"
+thumbnail: "/img/website/SRI-Intro-Thumbnail.jpg"
 videoTitle: "Introduction"
 heading: "The Third Paradigm of Risk Management: linking Strategy and Risk to Create Value."
 description: >-
