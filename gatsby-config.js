@@ -6,31 +6,6 @@ module.exports = {
 		image: "/img/logo.svg", // Path to your image you placed in the 'static' folder
 	},
 	plugins: [
-		"gatsby-plugin-react-helmet",
-		"gatsby-plugin-sass",
-		{
-			// keep as first gatsby-source-filesystem plugin for gatsby image support
-			resolve: "gatsby-source-filesystem",
-			options: {
-				path: `${__dirname}/static/img`,
-				name: "uploads",
-			},
-		},
-		{
-			resolve: "gatsby-source-filesystem",
-			options: {
-				path: `${__dirname}/src/pages`,
-				name: "pages",
-			},
-		},
-		{
-			resolve: "gatsby-source-filesystem",
-			options: {
-				path: `${__dirname}/src/img`,
-				name: "images",
-			},
-		},
-		"gatsby-plugin-sharp",
 		{
 			resolve: `gatsby-plugin-google-analytics`,
 			options: {
@@ -60,6 +35,31 @@ module.exports = {
 				cookieDomain: "strategicriskinsights.com",
 			},
 		},
+		"gatsby-plugin-react-helmet",
+		"gatsby-plugin-sass",
+		{
+			// keep as first gatsby-source-filesystem plugin for gatsby image support
+			resolve: "gatsby-source-filesystem",
+			options: {
+				path: `${__dirname}/static/img`,
+				name: "uploads",
+			},
+		},
+		{
+			resolve: "gatsby-source-filesystem",
+			options: {
+				path: `${__dirname}/src/pages`,
+				name: "pages",
+			},
+		},
+		{
+			resolve: "gatsby-source-filesystem",
+			options: {
+				path: `${__dirname}/src/img`,
+				name: "images",
+			},
+		},
+		"gatsby-plugin-sharp",
 		// {
 		// 	resolve: `gatsby-plugin-podcast-feed-mdx`,
 		// 	options: {
